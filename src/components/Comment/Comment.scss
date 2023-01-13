@@ -1,0 +1,135 @@
+@media screen and (min-device-width: 0px){
+    .inputredborder {
+        border: 0.125rem solid red;
+    }
+
+    .Comment__container {
+        padding: 0.9375rem 1rem;
+        border-bottom: 0.0625rem solid #E1E1E1;
+    }
+
+    .Comment__count {
+        font-weight: bold;
+    }
+
+    .Comment__submitform {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+    }
+    
+    .Comment__profileimg {
+        object-position: 20% 80%;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+    }
+
+    .Comment__form {
+        width: 75%;
+    }
+
+    .Comment__title--comment {
+        color: #AFAFAF;
+    }
+    
+    .Comment__input--comment {
+        width: 95%;
+        height: 6.25rem;
+        padding-left: 0.75rem;
+        padding-top: 0.75rem;
+    }
+
+    .Comment__button {
+        display: flex;
+        align-items: center;
+        border-radius: 0.25rem;
+        width: 100%;
+        height: 1.875rem;
+        background-color: #0095FF;
+        padding: 1.25rem 0rem;
+        text-align: center;
+        color: white;
+        border: none;
+    }
+
+    .Comment__button:hover {
+        background-color: #0065AD;
+        color: white;
+    }
+
+
+    .Comment__button--icon {
+        margin-left: 0.3125rem;
+
+    }
+
+    .Comment__button--placeholder {
+        padding-left: 25%;
+        color: white;
+    }
+
+    .CommentCard_list {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Comment__container {
+        padding-top: 0.9375rem;
+        padding-bottom: 1.875rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
+    }
+
+    .Comment__profileimg {
+        position: relative;
+        top: 1.25rem;
+    }
+
+    .Comment__form {
+        width: 80vw;
+    }
+
+    .Comment__title--comment {
+        color: #AFAFAF;
+    }
+
+    .Comment__form--input {
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    .Comment__input--comment {
+        width: 60%;
+        height: 1.5625rem;
+        padding-left: 0.75rem;
+        padding-top: 0.75rem;
+    }
+
+    .Comment__button {
+        width: 30%;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Comment__input--comment {
+        width: 73%;
+    }
+
+    .Comment__button {
+        width: 22%;
+    }
+
+    .Comment__button--placeholder {
+        padding-left: 15%;
+    }
+}
