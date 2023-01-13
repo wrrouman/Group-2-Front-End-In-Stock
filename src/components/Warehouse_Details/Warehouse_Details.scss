@@ -1,0 +1,56 @@
+@media screen and (min-device-width: 0px){
+    .warehouse_detail_popup {
+        // move later
+        margin-top: 30px;
+
+        margin-left: 16px;
+        margin-right: 16px;
+        border: 1px solid black;
+    }
+
+    .warehouse_header {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+    }
+
+    .warehouse_hearder_edit {
+        background-color: blue;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .warehouse_info_block {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+    }
+
+    .warehouse_info_blockborder {
+        display: none;
+    }
+
+    .warehouse_info_2 {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+}
+
+@media screen and (min-device-width: 768px){
+    .warehouse_info_block {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        border-bottom: none;
+    }
+
+    .warehouse_info_1 {
+        border-right: 1px solid black;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+}
