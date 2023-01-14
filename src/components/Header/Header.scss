@@ -1,3 +1,51 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
 .header {
     display: flex;
+    background-color: $instock-graphite;
+    @include mobile {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    @include tablet {
+    }
+    @include desktop {
+    }
+    &__nav-menu {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+        &__nav-logos-container {
+        }
+        &__nav-buttons-container {
+        }
+        &__nav-buttons--warehouse {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            padding: 0px 16px;
+            border-radius: 4px;
+            background-color: $instock-blue;
+            &:hover {
+                background-color: $instock-black;
+            }
+        }
+    }
+
+    &__sub-menu {
+        background-color: $instock-white;
+    }
 }
