@@ -1,23 +1,31 @@
 import './Warehouse_Details.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 //import images
 import Arrow_back from '../../assets/Icons/arrow_back-24px.svg';
 import Edit from '../../assets/Icons/edit-24px.svg';
 
+//import json files
+import Inventory_json from "../../server/data/inventories.json";
+import Warehouse_json from "../../server/data/warehouses.json";
+
 //import components
 import Inventory_List from '../Inventory_List/Inventory_List.js';
 
-function Warehouse_Details () {
+function Warehouse_Details (props) {
+    let { warehouseID } = useParams();
+
+    console.log(warehouseID);
 
     return (
         <>
+            <p>{warehouseID}</p>
             <div className="warehouse_detail_popup">
                 <div className="warehouse_header">
                     <img src={Arrow_back}/>
                     <p>Washington (Warehouse_Title)</p>
                     <div className="warehouse_hearder_edit">
-                        <NavLink to={`/edit`}>
+                        <NavLink to={`/edit/123`}>
                         {/* <NavLink to={`/edit/${warehouseID}`}> */}
                             <img src={Edit}/>
                         </NavLink>
@@ -54,6 +62,8 @@ function Warehouse_Details () {
             
         </>
     );
+    
+
 }
 
 export default Warehouse_Details;

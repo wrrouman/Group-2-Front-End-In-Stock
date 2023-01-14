@@ -1,4 +1,5 @@
 import './Inventory_Item.scss';
+import { NavLink } from 'react-router-dom';
 
 //import images
 import Chevron_Right from "../../assets/Icons/chevron_right-24px.svg";
@@ -45,7 +46,9 @@ function Inventory_Item(props) {
                 <div className="inventory_actionitem">
                     <p className="inventory_title_action">Action</p>
                     <div className="inventory_actionitemicon">
-                        <img src={Delete_Outline} className="inventory_item_actionicon"/>
+                        <NavLink to={`/inventory_delete/${props.Inventory_ItemInfo.id}`}>
+                            <img src={Delete_Outline} className="inventory_item_actionicon"/>
+                        </NavLink>
                         <img src={Edit} className="inventory_item_actionicon"/>
                     </div>
                 </div>
