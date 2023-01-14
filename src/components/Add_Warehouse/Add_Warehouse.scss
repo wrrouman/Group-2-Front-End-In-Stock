@@ -1,0 +1,83 @@
+
+
+
+@media screen and (min-device-width: 0px){
+    .warehouse_edit_popup {
+        // move later
+        margin-top: 30px;
+
+        margin-left: 16px;
+        margin-right: 16px;
+        border: 1px solid black;
+    }
+
+    .warehouse_edit_header {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+    }
+
+    .warehouse_edit_block1 {
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+
+    .warehouse_edit_block2 {
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .warehouse_editbutton_block {
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .warehouse_add_popup {
+        // move later
+        margin-top: 30px;
+
+        margin-left: 0px;
+        margin-right: 0px;
+        border: none;
+    }
+    
+    .warehouse_add_header {
+        margin-left: 24px;
+        margin-right: 24px;
+        border-bottom: 1px solid black;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+    }
+
+    .warehouse_add_form {
+        border: 1px solid black;
+    }
+
+    .warehouse_add_block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .warehouse_add_block1 {
+        border-bottom: none;
+        border-right: 1px solid black;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+}
