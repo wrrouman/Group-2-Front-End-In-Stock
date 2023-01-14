@@ -1,69 +1,69 @@
 @media screen and (min-device-width: 0px){
     input, textarea, select, button {
-        border: 1px solid black;
+        border: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__page {
         // move later
-        margin-top: 30px;
+        margin-top: 1.875rem;
 
-        margin-left: 16px;
-        margin-right: 16px;
-        border: 1px solid black;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__header {
         display: flex;
         flex-direction: row;
-        border-bottom: 1px solid black;
+        border-bottom: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__formblock--warehouse-details {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__formblock--contact-details {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10px;
+        padding-bottom: 0.625rem;
     }
 
     .Warehouse-Edit__buttonblock {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         display: flex;
         flex-direction: row;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
     }
 }
 
 @media screen and (min-device-width: 768px){
     .Warehouse-Edit__page {
         // move later
-        margin-top: 30px;
+        margin-top: 1.875rem;
 
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0rem;
+        margin-right: 0rem;
         border: none;
     }
     
     .Warehouse-Edit__header {
-        margin-left: 24px;
-        margin-right: 24px;
-        border-bottom: 1px solid black;
-        border: 1px solid black;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        border-bottom: 0.0625rem solid black;
+        border: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__form {
-        border: 1px solid black;
+        border: 0.0625rem solid black;
     }
 
     .Warehouse-Edit__block {
@@ -74,7 +74,7 @@
 
     .Warehouse-Edit__formblock--warehouse-details {
         border-bottom: none;
-        border-right: 1px solid black;
+        border-right: 0.0625rem solid black;
     }
 }
 
