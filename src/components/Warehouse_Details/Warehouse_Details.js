@@ -15,30 +15,28 @@ import Inventory_List from '../Inventory_List/Inventory_List.js';
 function Warehouse_Details (props) {
     let { warehouseID } = useParams();
 
-    console.log(warehouseID);
-
     return (
         <>
             <p>{warehouseID}</p>
-            <div className="warehouse_detail_popup">
-                <div className="warehouse_header">
+            <div className="Warehouse-Details__page">
+                <div className="Warehouse-Details__header">
                     <img src={Arrow_back}/>
                     <p>Washington (Warehouse_Title)</p>
-                    <div className="warehouse_hearder_edit">
-                        <NavLink to={`/edit/123`}>
+                    <div className="Warehouse-Details__header--edit">
+                        <NavLink to={`/edit_warehouse/123`}>
                         {/* <NavLink to={`/edit/${warehouseID}`}> */}
                             <img src={Edit}/>
                         </NavLink>
                     </div>
                 </div>
 
-                <div className="warehouse_info_block">
-                    <div className="warehouse_info_1">
+                <div className="Warehouse-Details__block">
+                    <div className="Warehouse-Details__block--address">
                         <p>WAREHOUSE ADDRESS:</p>
                         <p>33 Pearl Street SW, Washington, USA</p>
                     </div>
                         
-                    <div className="warehouse_info_2">
+                    <div className="Warehouse-Details__block--contact">
                         <div>
                             <p>CONTACT NAME:</p>
                             <p>Graeme Lyon</p>
@@ -53,7 +51,6 @@ function Warehouse_Details (props) {
                     </div>
 
                 </div>
-                <div className="warehouse_detailsborder"></div>
 
                 <Inventory_List/>
 

@@ -1,68 +1,68 @@
 @media screen and (min-device-width: 0px){
-    .inventory_itemblock {
+    .Inventory-Item__page {
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid black;
     }
 
-    .inventory_itemgroup {
+    .Inventory-Item__allinfo {
         display: flex;
         flex-direction: row;
         gap: 50px;
     }
 
-    .inventory_item {
+    .Inventory-Item__allinfo--info {
         display: flex;
         flex-direction: column;
     }
 
-    .inventory_itemname {
+    .Inventory-Item__allinfo--name {
         display: flex;
         flex-direction: row;
     }
 
-    .inventory_actionitem {
+    .Inventory-Item__action {
         display: flex;
         flex-direction: row;
         gap: 50px;
     } 
 
-    .inventory_item_actionicon {
+    .Inventory-Item__action--icon {
         width: 30px;
         height: 30px;
     }
 
-    .inventory_title_action {
+    .Inventory-Item__action--title {
         display: none;
     }
 }
 
 @media screen and (min-device-width: 768px){
-    .inventory_itemblock {
+    .Inventory-Item__page {
         display: flex;
         flex-direction: row;
         gap: 50px; 
         border-bottom: 1px solid black;
     }
 
-    .inventory_itemgroup {
+    .Inventory-Item__allinfo {
         display: flex;
         flex-direction: row;
     }
 
-    .inventory_item {
+    .Inventory-Item__allinfo--info {
         display: flex;
         flex-direction: row;
         gap: 50px;
     }
 
-    .inventory_actionitem {
+    .Inventory-Item__action {
         display: flex;
         flex-direction: column;
         gap: 0px;
     }
 
-    .inventory_title_action {
+    .Inventory-Item__action--title {
         display: flex;
     }
 

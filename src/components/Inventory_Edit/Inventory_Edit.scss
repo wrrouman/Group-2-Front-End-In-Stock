@@ -1,5 +1,5 @@
 @media screen and (min-device-width: 0px){
-    .Warehouse-Edit__page {
+    .Inventory-Edit__page {
         // move later
         margin-top: 30px;
 
@@ -8,70 +8,52 @@
         border: 1px solid black;
     }
 
-    .Warehouse-Edit__header {
+    .Inventory-Edit__header {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid black;
     }
 
-    .Warehouse-Edit__formblock--warehouse-details {
+    .Inventory-Edit__block--item-details {
         padding-left: 24px;
         padding-right: 24px;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10px;
         border-bottom: 1px solid black;
     }
 
-    .Warehouse-Edit__formblock--contact-details {
+    .Inventory-Edit__block--item-availability {
         padding-left: 24px;
         padding-right: 24px;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10px;
     }
 
-    .Warehouse-Edit__buttonblock {
-        padding-left: 24px;
-        padding-right: 24px;
+    .Inventory-Edit__block--status {
         display: flex;
         flex-direction: row;
-        padding-bottom: 10px;
+        gap: 30px;
+    }
+
+    .Inventory-Edit__block--editbutton {
+        padding-left: 24px;
+        padding-right: 24px;
         border-bottom: 1px solid black;
     }
 }
 
 @media screen and (min-device-width: 768px){
-    .Warehouse-Edit__page {
-        // move later
-        margin-top: 30px;
-
-        margin-left: 0px;
-        margin-right: 0px;
-        border: none;
-    }
-    
-    .Warehouse-Edit__header {
-        margin-left: 24px;
-        margin-right: 24px;
-        border-bottom: 1px solid black;
-        border: 1px solid black;
-    }
-
-    .Warehouse-Edit__form {
-        border: 1px solid black;
-    }
-
-    .Warehouse-Edit__block {
+    .Inventory-Edit__block {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
 
-    .Warehouse-Edit__formblock--warehouse-details {
+    .Inventory-Edit__block--item-details {
         border-bottom: none;
         border-right: 1px solid black;
     }
+    
 }
 
 @media screen and (min-device-width: 1280px){

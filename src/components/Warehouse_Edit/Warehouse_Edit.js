@@ -1,20 +1,24 @@
 import './Warehouse_Edit.scss';
+import { NavLink, useParams } from 'react-router-dom';
 
 //import images
 import Arrow_Back from "../../assets/Icons/arrow_back-24px.svg"; 
 
 function Warehouse_Edit() {
+    let { warehouseID } = useParams();
+
     return (
         <>
-            <div className="warehouse_edit_popup">
-                <div className="warehouse_edit_header">
+            <p>{ warehouseID }</p>
+            <div className="Warehouse-Edit__page">
+                <div className="Warehouse-Edit__header">
                     <img src={Arrow_Back}/>
                     <p>Edit Warehouse</p>
                 </div>
 
-                <form className="warehouse_edit_form">
-                    <div className="warehouse_edit_block">
-                        <div className="warehouse_edit_block1">
+                <form className="Warehouse-Edit__form">
+                    <div className="Warehouse-Edit__block">
+                        <div className="Warehouse-Edit__formblock--warehouse-details">
                             <p>Warehouse Details</p>
 
                             <label >Warehouse Name</label>
@@ -30,7 +34,7 @@ function Warehouse_Edit() {
                             <input placeholder="USA" />
                         </div>
 
-                        <div className="warehouse_edit_block2">
+                        <div className="Warehouse-Edit__formblock--contact-details">
                             <p>Contact Details</p>
 
                             <label>Contact Name</label>
@@ -49,7 +53,7 @@ function Warehouse_Edit() {
                     </div>
                     
 
-                    <div className="warehouse_editbutton_block">
+                    <div className="Warehouse-Edit__buttonblock">
                         <button>Cancel</button>
                         <button>Save</button>
                     </div>

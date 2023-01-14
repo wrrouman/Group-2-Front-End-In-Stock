@@ -11,12 +11,12 @@ import Edit from "../../assets/Icons/edit-24px.svg";
 function Inventory_Item(props) {
     return(
         <>
-            <div className="inventory_itemblock">
-                <div className="inventory_itemgroup">
-                    <div className="inventory_item">
+            <div className="Inventory-Item__page">
+                <div className="Inventory-Item__allinfo">
+                    <div className="Inventory-Item__allinfo--info">
                         <div>
                             <p>INVENTORY ITEM</p>
-                            <div className="inventory_itemname">
+                            <div className="Inventory-Item__allinfo--name">
                                 <p>{props.Inventory_ItemInfo.itemName}</p>
                                 <img src={Chevron_Right}/>
                             </div>
@@ -28,7 +28,7 @@ function Inventory_Item(props) {
                         </div>
                     </div>
 
-                    <div className="inventory_item">
+                    <div className="Inventory-Item__allinfo--info">
                         <div>
                             <p>STATUS</p>
                             <p>{props.Inventory_ItemInfo.status}</p>
@@ -43,18 +43,17 @@ function Inventory_Item(props) {
 
                 </div>
 
-                <div className="inventory_actionitem">
-                    <p className="inventory_title_action">Action</p>
-                    <div className="inventory_actionitemicon">
+                <div className="Inventory-Item__action">
+                    <p className="Inventory-Item__action--title">Action</p>
+                    <div className="Inventory-Item__action--icongroup">
                         <NavLink to={`/inventory_delete/${props.Inventory_ItemInfo.id}`}>
-                            <img src={Delete_Outline} className="inventory_item_actionicon"/>
+                            <img src={Delete_Outline} className="Inventory-Item__action--icon"/>
                         </NavLink>
-                        <img src={Edit} className="inventory_item_actionicon"/>
+                        <img src={Edit} className="Inventory-Item__action--icon"/>
                     </div>
                 </div>
 
             </div>
-            <div className="inventory_itemborder"></div>
         </>
     );
 }

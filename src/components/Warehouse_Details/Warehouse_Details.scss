@@ -1,5 +1,5 @@
 @media screen and (min-device-width: 0px){
-    .warehouse_detail_popup {
+    .Warehouse-Details__page {
         // move later
         margin-top: 30px;
 
@@ -8,30 +8,26 @@
         border: 1px solid black;
     }
 
-    .warehouse_header {
+    .Warehouse-Details__header {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid black;
     }
 
-    .warehouse_hearder_edit {
+    .Warehouse-Details__header--edit {
         background-color: blue;
         border-radius: 50%;
         width: 30px;
         height: 30px;
     }
 
-    .warehouse_info_block {
+    .Warehouse-Details__block {
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid black;
     }
 
-    .warehouse_info_blockborder {
-        display: none;
-    }
-
-    .warehouse_info_2 {
+    .Warehouse-Details__block--contact {
         display: flex;
         flex-direction: row;
         gap: 50px;
@@ -40,14 +36,14 @@
 }
 
 @media screen and (min-device-width: 768px){
-    .warehouse_info_block {
+    .Warehouse-Details__block {
         display: flex;
         flex-direction: row;
         gap: 30px;
         border-bottom: none;
     }
 
-    .warehouse_info_1 {
+    .Warehouse-Details__block--address {
         border-right: 1px solid black;
     }
 }
