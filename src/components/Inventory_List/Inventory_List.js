@@ -1,5 +1,8 @@
-import "./Inventory_List.js";
+import "./Inventory_List.scss";
 import { useEffect, useState } from 'react';
+
+//import images
+import Sort from "../../assets/Icons/sort-24px.svg";
 
 //import components
 import Inventory_Item from '../Inventory_Item/Inventory_Item.js';
@@ -19,6 +22,32 @@ function Inventory_List() {
 
     return(
         <>
+            <div className="Inventory-List__allinfo--tablettitlegroup">
+                <div className="Inventory-List__allinfo--tablettitle-block Inventory-List__tablettitle--inventoryitem">
+                    <div className="Inventory-List__allinfo--tablettitle">INVENTORY ITEM</div>
+                    <img src={Sort}/>
+                </div>
+
+                <div className="Inventory-List__allinfo--tablettitle-block Inventory-List__tablettitle--category">
+                    <div className="Inventory-List__allinfo--tablettitle">CATEGORY</div>
+                    <img src={Sort}/>
+                </div>
+
+                <div className="Inventory-List__allinfo--tablettitle-block Inventory-List__tablettitle--status">
+                <div className="Inventory-List__allinfo--tablettitle">STATUS</div>
+                        <img src={Sort}/>
+                </div>
+
+                <div className="Inventory-List__allinfo--tablettitle-block Inventory-List__tablettitle--qty">
+                    <div className="Inventory-List__allinfo--tablettitle">QTY</div>
+                    <img src={Sort}/>
+                </div>
+
+                <div className="Inventory-List__allinfo--tablettitle-block Inventory-List__tablettitle--action">
+                    <div className="Inventory-List__allinfo--tablettitle">ACTIONS</div>
+                </div>
+            </div>
+
             <section>{
                 CurrentInventoryJson.map((inventory) => (
                     <Inventory_Item Inventory_ItemInfo={inventory} />

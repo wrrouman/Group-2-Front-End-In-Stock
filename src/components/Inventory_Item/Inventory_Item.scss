@@ -7,6 +7,10 @@
         padding-bottom: 16px;
     }
 
+    .Inventory-Item__allinfo--tablettitlegroup {
+        display: none;
+    }
+
     .Inventory-Item__allinfo {
         display: flex;
         flex-direction: row;
@@ -26,7 +30,7 @@
         
     }
 
-    .Inventory-Item__allinfo--title {
+    .Inventory-Item__allinfo--mobiletitle {
         font-size: 11px;
         color: #5C667E;
         padding-bottom: 4px;
@@ -51,28 +55,57 @@
         gap: 240px;
     }
 
-    .Inventory-Item__action--title {
-        display: none;
-    }
 }
 
 @media screen and (min-device-width: 768px){
     .Inventory-Item__page {
         display: flex;
         flex-direction: row;
-        gap: 3.125rem; 
+        gap: 0px; 
         border-bottom: 0.0625rem solid black;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
 
     .Inventory-Item__allinfo {
         display: flex;
         flex-direction: row;
+        gap: 0px;
+    }
+
+    .Inventory-Item__allinfo--infoblock {
+        height: 22px;
+        padding-bottom: 0px;
+    }
+
+    .Inventory-Item__tablettitle--inventoryitem {
+        padding-left: 32px;
+        width: 120px;
+    }
+
+    .Inventory-Item__tablettitle--category {
+        padding-left: 32px;
+        width: 70px;
+    }
+
+    .Inventory-Item__tablettitle--status {
+        padding-left: 60px;
+        width: 75px;
+    }
+
+    .Inventory-Item__tablettitle--qty {
+        padding-left: 125px;
+        width: 30px;
     }
 
     .Inventory-Item__allinfo--info {
         display: flex;
         flex-direction: row;
-        gap: 3.125rem;
+        font-size: 14px;
+    }
+
+    .Inventory-Item__allinfo--mobiletitle {
+        display: none;
     }
 
     .Inventory-Item__action {
@@ -81,11 +114,29 @@
         gap: 0rem;
     }
 
-    .Inventory-Item__action--title {
-        display: flex;
+    .Inventory-Item__action--icongroup {
+        gap: 24px;
+        margin-left: 60px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 
 }
 
 @media screen and (min-device-width: 1280px){
+    .Inventory-Item__tablettitle--category {
+        padding-left: 114px;
+    }
+
+    .Inventory-Item__tablettitle--status {
+        padding-left: 102px;
+    }
+
+    .Inventory-Item__tablettitle--qty {
+        padding-left: 205px;
+    }
+
+    .Inventory-Item__action--icongroup {
+        margin-left: 130px;
+    }
 }

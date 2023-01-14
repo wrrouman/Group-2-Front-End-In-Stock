@@ -26,6 +26,8 @@ function Warehouse_Details (props) {
                         <NavLink to={`/edit_warehouse/123`} className="Warehouse-Details__header--editicon-link">
                         {/* <NavLink to={`/edit/${warehouseID}`}> */}
                             <img src={Edit} className="Warehouse-Details__header--editicon"/>
+                            <p className="Warehouse-Details__header--editicon-description">Edit</p>
+                            
                         </NavLink>
                     </div>
                 </div>
@@ -37,13 +39,13 @@ function Warehouse_Details (props) {
                     </div>
                         
                     <div className="Warehouse-Details__block--contact">
-                        <div>
+                        <div className="Warehouse-Details__block--contact-name">
                             <p className="Warehouse-Details__block--title">CONTACT NAME:</p>
                             <p className="Warehouse-Details__block--content">Graeme Lyon</p>
                             <p className="Warehouse-Details__block--content">Warehouse Manager</p>
                         </div>
 
-                        <div>
+                        <div className="Warehouse-Details__block--contact-info">
                             <p className="Warehouse-Details__block--title">CONTACT INFORMATION:</p>
                             <p className="Warehouse-Details__block--content">+1 (647) 504-0911</p>
                             <p className="Warehouse-Details__block--content">glyon@instock.com</p>
