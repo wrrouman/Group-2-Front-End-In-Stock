@@ -3,6 +3,8 @@
         display: flex;
         flex-direction: column;
         border-bottom: 0.0625rem solid black;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     .Inventory-Item__allinfo {
@@ -11,9 +13,23 @@
         gap: 3.125rem;
     }
 
+    .Inventory-Item__allinfo--infoblock {
+        padding-bottom: 20px;
+        padding-left: 24px;
+    }
+
     .Inventory-Item__allinfo--info {
         display: flex;
         flex-direction: column;
+        font-size: 13px;
+        color: #13182C;
+        
+    }
+
+    .Inventory-Item__allinfo--title {
+        font-size: 11px;
+        color: #5C667E;
+        padding-bottom: 4px;
     }
 
     .Inventory-Item__allinfo--name {
@@ -27,9 +43,12 @@
         gap: 3.125rem;
     } 
 
-    .Inventory-Item__action--icon {
-        width: 1.875rem;
-        height: 1.875rem;
+    .Inventory-Item__action--icongroup {
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: row;
+        gap: 240px;
     }
 
     .Inventory-Item__action--title {

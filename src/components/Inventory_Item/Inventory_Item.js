@@ -14,30 +14,30 @@ function Inventory_Item(props) {
             <div className="Inventory-Item__page">
                 <div className="Inventory-Item__allinfo">
                     <div className="Inventory-Item__allinfo--info">
-                        <div>
-                            <p>INVENTORY ITEM</p>
+                        <div className="Inventory-Item__allinfo--infoblock">
+                            <p className="Inventory-Item__allinfo--title">INVENTORY ITEM</p>
                             <div className="Inventory-Item__allinfo--name">
-                                <p>{props.Inventory_ItemInfo.itemName}</p>
-                                <img src={Chevron_Right}/>
+                                <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.itemName}</p>
+                                <img src={Chevron_Right} className="Inventory-Item__allinfo--chevronrighticon"/>
                             </div>
                         </div>
 
-                        <div>
-                            <p>CATEGORY</p>
-                            <p>{props.Inventory_ItemInfo.category}</p>
+                        <div className="Inventory-Item__allinfo--infoblock">
+                            <p className="Inventory-Item__allinfo--title">CATEGORY</p>
+                            <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.category}</p>
                         </div>
                     </div>
 
                     <div className="Inventory-Item__allinfo--info">
-                        <div>
-                            <p>STATUS</p>
-                            <p>{props.Inventory_ItemInfo.status}</p>
+                        <div className="Inventory-Item__allinfo--infoblock">
+                            <p className="Inventory-Item__allinfo--title">STATUS</p>
+                            <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.status}</p>
                             
                         </div>
 
-                        <div>
-                            <p>QTY</p>
-                            <p>{props.Inventory_ItemInfo.quantity}</p>
+                        <div className="Inventory-Item__allinfo--infoblock">
+                            <p className="Inventory-Item__allinfo--title">QTY</p>
+                            <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.quantity}</p>
                         </div>
                     </div>
 
@@ -47,11 +47,11 @@ function Inventory_Item(props) {
                     <p className="Inventory-Item__action--title">Action</p>
                     <div className="Inventory-Item__action--icongroup">
                         <NavLink to={`/inventory_deleteitems/${props.Inventory_ItemInfo.id}`}>
-                            <img src={Delete_Outline} className="Inventory-Item__action--icon"/>
+                            <img src={Delete_Outline} className="Inventory-Item__action--deleteicon"/>
                         </NavLink>
 
                         <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.id}`}>
-                            <img src={Edit} className="Inventory-Item__action--icon"/>
+                            <img src={Edit} className="Inventory-Item__action--editicon"/>
                         </NavLink>
 
                     </div>

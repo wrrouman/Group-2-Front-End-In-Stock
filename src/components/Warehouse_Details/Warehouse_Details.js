@@ -20,33 +20,33 @@ function Warehouse_Details (props) {
             <p>{warehouseID}</p>
             <div className="Warehouse-Details__page">
                 <div className="Warehouse-Details__header">
-                    <img src={Arrow_back}/>
-                    <p>Washington (Warehouse_Title)</p>
+                    <img src={Arrow_back} className="Warehouse-Details__header--arrowbackicon"/>
+                    <p className="Warehouse-Details__header--warehouse-name">Washington</p>
                     <div className="Warehouse-Details__header--edit">
-                        <NavLink to={`/edit_warehouse/123`}>
+                        <NavLink to={`/edit_warehouse/123`} className="Warehouse-Details__header--editicon-link">
                         {/* <NavLink to={`/edit/${warehouseID}`}> */}
-                            <img src={Edit}/>
+                            <img src={Edit} className="Warehouse-Details__header--editicon"/>
                         </NavLink>
                     </div>
                 </div>
 
                 <div className="Warehouse-Details__block">
                     <div className="Warehouse-Details__block--address">
-                        <p>WAREHOUSE ADDRESS:</p>
-                        <p>33 Pearl Street SW, Washington, USA</p>
+                        <p className="Warehouse-Details__block--title">WAREHOUSE ADDRESS:</p>
+                        <p className="Warehouse-Details__block--content">33 Pearl Street SW, Washington, USA</p>
                     </div>
                         
                     <div className="Warehouse-Details__block--contact">
                         <div>
-                            <p>CONTACT NAME:</p>
-                            <p>Graeme Lyon</p>
-                            <p>Warehouse Manager</p>
+                            <p className="Warehouse-Details__block--title">CONTACT NAME:</p>
+                            <p className="Warehouse-Details__block--content">Graeme Lyon</p>
+                            <p className="Warehouse-Details__block--content">Warehouse Manager</p>
                         </div>
 
                         <div>
-                            <p>CONTACT INFORMATION:</p>
-                            <p>+1 (647) 504-0911</p>
-                            <p>glyon@instock.com</p>
+                            <p className="Warehouse-Details__block--title">CONTACT INFORMATION:</p>
+                            <p className="Warehouse-Details__block--content">+1 (647) 504-0911</p>
+                            <p className="Warehouse-Details__block--content">glyon@instock.com</p>
                         </div>
                     </div>
 

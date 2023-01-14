@@ -12,22 +12,59 @@
         display: flex;
         flex-direction: row;
         border-bottom: 0.0625rem solid black;
+        height: 92px;
+        align-items: center;
+    }
+
+    .Warehouse-Details__header--arrowbackicon {
+        margin-left: 28px;
+    }
+
+    .Warehouse-Details__header--warehouse-name {
+        font-size: 1.75rem;
+        margin-left: 12px;
+        font-weight: bold;
     }
 
     .Warehouse-Details__header--edit {
         background-color: blue;
         border-radius: 50%;
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 36px;
+        height: 36px;
         display:flex;
         justify-content: center;
         align-items: center;
+        margin-left: 70px;
+    }
+
+    .Warehouse-Details__header--editicon-link {
+        width: 24px;
+        height: 24px;
     }
 
     .Warehouse-Details__block {
         display: flex;
         flex-direction: column;
         border-bottom: 0.0625rem solid black;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    .Warehouse-Details__block--address {
+        padding-bottom: 36px;
+    }
+
+    .Warehouse-Details__block--title {
+        font-size: 11px;
+        color: #5C667E;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Details__block--content {
+        font-size: 13px;
+        color: #13182C;
     }
 
     .Warehouse-Details__block--contact {
