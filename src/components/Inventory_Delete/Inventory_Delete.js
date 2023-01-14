@@ -11,7 +11,11 @@ function Inventory_Delete() {
         <>
             <div className="Inventory-Delete__page">
                 <p>{inventoryID}</p>
-                <img src={Close}/>
+                <NavLink to={`/warehouse_details/123`}>
+                {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
+                    <img src={Close}/>
+                </NavLink>
+
                 <p>Delete (Television) inventory item?</p>
                 <p>Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action</p>
                 <button>Cancel</button>

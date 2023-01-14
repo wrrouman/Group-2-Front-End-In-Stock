@@ -12,7 +12,11 @@ function Warehouse_Edit() {
             <p>{ warehouseID }</p>
             <div className="Warehouse-Edit__page">
                 <div className="Warehouse-Edit__header">
-                    <img src={Arrow_Back}/>
+                    <NavLink to={"/warehouse_details/123"}>
+                    {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
+                        <img src={Arrow_Back}/>
+                    </NavLink>
+
                     <p>Edit Warehouse</p>
                 </div>
 

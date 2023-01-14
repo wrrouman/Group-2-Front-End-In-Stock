@@ -1,4 +1,8 @@
 @media screen and (min-device-width: 0px){
+    input, textarea, select, button {
+        border: 1px solid black;
+    }
+
     .Warehouse-Edit__page {
         // move later
         margin-top: 30px;

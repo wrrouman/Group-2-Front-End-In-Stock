@@ -46,10 +46,14 @@ function Inventory_Item(props) {
                 <div className="Inventory-Item__action">
                     <p className="Inventory-Item__action--title">Action</p>
                     <div className="Inventory-Item__action--icongroup">
-                        <NavLink to={`/inventory_delete/${props.Inventory_ItemInfo.id}`}>
+                        <NavLink to={`/inventory_deleteitems/${props.Inventory_ItemInfo.id}`}>
                             <img src={Delete_Outline} className="Inventory-Item__action--icon"/>
                         </NavLink>
-                        <img src={Edit} className="Inventory-Item__action--icon"/>
+
+                        <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.id}`}>
+                            <img src={Edit} className="Inventory-Item__action--icon"/>
+                        </NavLink>
+
                     </div>
                 </div>
 

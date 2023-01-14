@@ -12,7 +12,11 @@ function Inventory_Edit() {
             <p>{ inventoryID }</p>
             <div className="Inventory-Edit__page">
                 <div className="Inventory-Edit__header">
-                    <img src={Arrow_back}/>
+                    <NavLink to={`/warehouse_details/123`}>
+                    {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
+                        <img src={Arrow_back}/>
+                    </NavLink>
+
                     <p>Edit Inventory</p>
                 </div>
 
