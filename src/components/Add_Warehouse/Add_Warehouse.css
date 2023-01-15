@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "TitilliumWeb-SemiBold";
+  src: url(../../assets/Fonts/TitilliumWeb-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src: url(../../assets/Fonts/TitilliumWeb-Regular.ttf) format("truetype");
+  font-weight: 600;
+}
+* {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  text-decoration: none;
+  list-style: none;
+  font-family: "TitilliumWeb-Regular";
+}
+
+@media screen and (min-device-width: 0px) {
+  input, textarea, select, button {
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .warehouse_add_popup {
+    margin-top: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border: 1px solid black;
+  }
+  .warehouse_add_header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+  .warehouse_add_block1 {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
+  .warehouse_add_block2 {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .warehouse_addbutton_block {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .warehouse_add_popup {
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+  }
+  .warehouse_add_header {
+    margin-left: 24px;
+    margin-right: 24px;
+    border-bottom: 1px solid black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+  .warehouse_add_form {
+    border: 1px solid black;
+  }
+  .warehouse_add_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .warehouse_add_block1 {
+    border-bottom: none;
+    border-right: 1px solid black;
+  }
+}/*# sourceMappingURL=Add_Warehouse.css.map */

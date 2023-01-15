@@ -1,21 +1,27 @@
 import "./Add_Warehouse.scss";
+import { NavLink, useParams } from 'react-router-dom';
 
 //import images
 import Arrow_Back from "../../assets/Icons/arrow_back-24px.svg";
 
+function Warehouse_Add(){
+    let {warehouseID} = useParams();
+}
+
 function Add_Warehouse() {
   return (
     <>
+    <p>{Warehouse_Add}</p>
       <div className="warehouse_add_popup">
         <div className="warehouse_add_header">
           <img src={Arrow_Back} />
-          <p>Edit Warehouse</p>
+          <p>Add New Warehouse</p>
         </div>
 
         <form className="warehouse_add_form">
           <div className="warehouse_add_block">
             <div className="warehouse_add_block1">
-              <p>Warehouse Details</p>
+              <p className="warehouse_details">Warehouse Details</p>
 
               <label>Warehouse Name</label>
               <input placeholder="Warehouse Name" />
@@ -31,7 +37,7 @@ function Add_Warehouse() {
             </div>
 
             <div className="warehouse_add_block2">
-              <p>Contact Details!</p>
+              <p>Contact Details</p>
 
               <label>Contact Name</label>
               <input placeholder="Contact Name" />
@@ -48,8 +54,8 @@ function Add_Warehouse() {
           </div>
 
           <div className="warehouse_addbutton_block">
-            <button>Cancel</button>
-            <button>+Add Warehouse</button>
+            <button className="button_white">Cancel</button>
+            <button className="button_color">+Add Warehouse</button>
           </div>
         </form>
       </div>

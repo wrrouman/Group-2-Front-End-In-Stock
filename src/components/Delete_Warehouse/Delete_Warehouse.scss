@@ -1,0 +1,99 @@
+
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variable" as *;
+
+@media screen and (min-device-width: 0px){
+    .Delete_Warehouse__page {
+        // move later
+        margin-top: 30px;
+        margin-left: 16px;
+        margin-right: 16px;
+       
+    } 
+    
+    .delete_x{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .delete_warehouse-header{
+        position: absolute;
+        width: 343px;
+        height: 72px;
+        left: 16px;
+        top: 60px;
+
+        /* M H1 */
+
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        /* or 129% */
+
+        display: flex;
+        align-items: center;
+        color: $instock-black;
+    }
+    .delete_warehouse-confirmation{
+        position: absolute;
+        width: 343px;
+        height: 78px;
+        left: 16px;
+        top: 148px;
+        
+        /* M P1 */
+        
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        color:$instock-black;
+        
+    }
+   
+    .delete_warehouse--buttons{
+        display: flex;
+        justify-content: space-between;
+        position: relative; 
+        top: 607px
+
+    }
+    .delete_warehouse--cancelButton{
+        width: 163px;
+        height: 36px;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        border: 1px solid #BDC5D5;
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 8px 63px;
+        gap: 10px;
+
+       
+    }
+    .delete_warehouse--deleteButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 8px 63px;
+        gap: 10px;
+
+        /* Red */
+        background: #C94515;
+        border-radius: 20px;
+        color: $instock-white;
+       
+    }
+}
+
+@media screen and (min-device-width: 768px){
+}
+
+@media screen and (min-device-width: 1280px){
+}

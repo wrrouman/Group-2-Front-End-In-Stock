@@ -1,32 +1,112 @@
-
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variable" as *;
 
 
 @media screen and (min-device-width: 0px){
-    .warehouse_edit_popup {
-        // move later
-        margin-top: 30px;
-
-        margin-left: 16px;
-        margin-right: 16px;
+    input, textarea, select, button {
         border: 1px solid black;
+        border-radius: 20px;
     }
 
-    .warehouse_edit_header {
+
+    label{
+        font-size: 13px;
+        font-weight: 700;
+        color: $instock-black;
+        line-break: 20px;
+       padding-top: 1.5rem;
+    }
+    .button_white{
+        height: 36px;
+        width: 140px;
+        border: 1px solid $instock-cloud;
+        background-color: $instock-white;
+        color: $instock-slate;
+        
+
+    }
+
+    .button_color{
+        height: 36px;
+        width: 140px;
+        border: none;
+        background-color: $instock-blue;
+        color: $instock-white;
+
+    }
+
+    input {
+        box-sizing: border-box;
+        background-color: $instock-white;
+        border: 1px solid $instock-cloud;
+        border-radius: 20px;
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: aqua;
+        padding-left:1rem;
+        height: 36px;
+
+    }
+
+   .warehouse_blueButton{
+        background-color: $instock-blue;
+   }
+
+    .warehouse_add_popup {
+        position: absolute;
+        left: 4.27%;
+        right: 4.27%;
+        top: 11.79%;
+        bottom: 8.32%;
+        background: $instock-white;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+        border-radius: 3px;
+    }
+
+    .warehouse_details{
+
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: $instock-black;
+
+    }
+
+    .warehouse_add_header {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid black;
+        display: flex;
+        justify-content: center ;
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        color: $instock-black;
     }
 
-    .warehouse_edit_block1 {
+    .warehouse_add_block1 {
         padding-left: 24px;
         padding-right: 24px;
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
         border-bottom: 1px solid black;
+
+        
     }
 
-    .warehouse_edit_block2 {
+    .warehouse_add_block2 {
         padding-left: 24px;
         padding-right: 24px;
         display: flex;
@@ -34,13 +114,15 @@
         padding-bottom: 10px;
     }
 
-    .warehouse_editbutton_block {
+    .warehouse_addbutton_block {
         padding-left: 24px;
         padding-right: 24px;
         display: flex;
         flex-direction: row;
         padding-bottom: 10px;
         border-bottom: 1px solid black;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -71,6 +153,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+
     }
 
     .warehouse_add_block1 {
