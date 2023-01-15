@@ -9,33 +9,36 @@ import Close from "../../assets/Icons/close-24px.svg";
 import Inventory_Json from "../../server/data/inventories.json";
 import Warehouse_Json from "../../server/data/warehouses.json";
 
-function Inventory_Delete() {
-    let { inventoryID } = useParams();
+function Inventory_Delete(props) {
+    // let { inventoryID } = useParams();
 
-    //useState variable
-    const [InventoryJson, setInventoryJson] = useState(Inventory_Json);
-    const [CurrentInventoryJson, setCurrentInventoryJson] = useState([]);
+    // //useState variable
+    // const [InventoryJson, setInventoryJson] = useState(Inventory_Json);
+    // const [CurrentInventoryJson, setCurrentInventoryJson] = useState([]);
 
-    useEffect(() => {
-        let current_inventory = InventoryJson.filter(x => x.id === inventoryID);
-        setCurrentInventoryJson(current_inventory);
-    }, [inventoryID]);
+    // useEffect(() => {
+    //     let current_inventory = InventoryJson.filter(x => x.id === inventoryID);
+    //     setCurrentInventoryJson(current_inventory);
+    // }, [inventoryID]);
 
-    console.log(CurrentInventoryJson[0]?.itemName);
+    // console.log(CurrentInventoryJson[0]?.itemName);
 
     return(
         <>
             <div className="Inventory-Delete__page">
-                <p>{inventoryID}</p>
-                <NavLink to={`/warehouse_details/123`}>
-                {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
-                    <img src={Close}/>
-                </NavLink>
+                <img src={Close} className="Inventory-Delete__closeicon" onClick={props.CloseDeletePopup}/>
 
-                <p>Delete ({CurrentInventoryJson[0]?.itemName}) inventory item?</p>
-                <p>Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action</p>
-                <button>Cancel</button>
-                <button>Delete</button>
+                <div className="Inventory-Delete__block">
+                    <p className="Inventory-Delete__block--title">Delete {props.Inventory_ItemInfo.itemName} inventory item?</p>
+                    <p className="Inventory-Delete__block--description">Please confirm that you'd like to delete {props.Inventory_ItemInfo.itemName} from the inventory list.</p>
+                    <p className="Inventory-Delete__block--description">You won't be able to undo this action</p>
+                </div>
+
+                <div className="Inventory-Delete__block--button">
+                        <button className="Inventory-Delete__block--button-cancel">Cancel</button>
+                        <button className="Inventory-Delete__block--button-delete">Delete</button>
+                </div>
+
             </div>
 
         </>

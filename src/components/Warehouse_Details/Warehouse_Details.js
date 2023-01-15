@@ -1,4 +1,5 @@
 import './Warehouse_Details.scss';
+import { useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 
 //import images
@@ -17,7 +18,7 @@ function Warehouse_Details (props) {
 
     return (
         <>
-            <p>{warehouseID}</p>
+            {/* <p>{warehouseID}</p> */}
             <div className="Warehouse-Details__page">
                 <div className="Warehouse-Details__header">
                     <img src={Arrow_back} className="Warehouse-Details__header--arrowbackicon"/>

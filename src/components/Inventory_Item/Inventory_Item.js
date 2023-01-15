@@ -1,4 +1,5 @@
 import './Inventory_Item.scss';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //import images
@@ -6,9 +7,16 @@ import Chevron_Right from "../../assets/Icons/chevron_right-24px.svg";
 import Delete_Outline from "../../assets/Icons/delete_outline-24px.svg";
 import Edit from "../../assets/Icons/edit-24px.svg";
 
-//impor
+//import components
+import Inventory_Delete from '../Inventory_Delete/Inventory_Delete';
 
 function Inventory_Item(props) {
+    //Delete Popup
+    const [ShowDeletePopup, setShowDeletePopup] = useState(false);
+    const OpenDeletePopup = () => { setShowDeletePopup(true)};
+    const CloseDeletePopup = () => { setShowDeletePopup(false)};
+
+
     return(
         <>
             <div className="Inventory-Item__page">
@@ -45,17 +53,15 @@ function Inventory_Item(props) {
 
                 <div className="Inventory-Item__action">
                     <div className="Inventory-Item__action--icongroup">
-                        <NavLink to={`/inventory_deleteitems/${props.Inventory_ItemInfo.id}`}>
-                            <img src={Delete_Outline} className="Inventory-Item__action--deleteicon"/>
-                        </NavLink>
+                        <img src={Delete_Outline} className="Inventory-Item__action--deleteicon" onClick={OpenDeletePopup}/>
+
 
                         <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.id}`}>
                             <img src={Edit} className="Inventory-Item__action--editicon"/>
                         </NavLink>
-
                     </div>
                 </div>
-
+                <div>{ ShowDeletePopup ? <Inventory_Delete Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} /> : null }</div>
             </div>
         </>
     );

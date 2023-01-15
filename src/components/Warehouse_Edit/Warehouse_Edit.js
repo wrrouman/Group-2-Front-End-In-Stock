@@ -9,7 +9,7 @@ function Warehouse_Edit() {
 
     return (
         <>
-            <p>{ warehouseID }</p>
+            {/* <p>{ warehouseID }</p> */}
             <div className="Warehouse-Edit__page">
                 <div className="Warehouse-Edit__header">
                     <NavLink to={"/warehouse_details/123"} className="Warehouse-Edit__header--arrowbackicon-link">

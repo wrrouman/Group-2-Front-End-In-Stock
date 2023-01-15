@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/warehouse_details/:warehouseID" element={<Warehouse_Details Warehouse_json={Warehouse_json}/>} />
             <Route path="/edit_warehouse/:warehouseID" element={<Warehouse_Edit/>} />
-            <Route path="/inventory_deleteitems/:inventoryID" element={<Inventory_Delete/>}/>
+            {/* <Route path="/inventory_deleteitems/:inventoryID" element={<Inventory_Delete/>}/> */}
             <Route path="/edit_inventoryitems/:inventoryID" element={<Inventory_Edit/>}/>
           </Routes>
         </BrowserRouter>
