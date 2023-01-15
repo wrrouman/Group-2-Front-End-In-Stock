@@ -1,6 +1,6 @@
 import "./App.scss";
-import "./styles/global.scss";
-import "./App.css";
+import "./styles/partials/_global.scss";
+import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //import components
@@ -14,7 +14,7 @@ function App() {
                 <Routes>
                     {/* return here to correct paths */}
                     <Route path="placeholder1" element={<Header />} />
-                    <Route path="Add"git element={<Add_Warehouse />} />
+                    <Route path="Add" git element={<Add_Warehouse />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
