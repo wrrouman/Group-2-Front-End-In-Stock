@@ -28,7 +28,7 @@ function Header({ getURL }) {
                         ></img>
                     </div>
                     <div className="header__nav-buttons-container">
-                        <button className="header__nav-buttons--warehouse">
+                        <button className="header__nav-buttons--warehouse ">
                             Warehouse
                         </button>
                         <button className="header__nav-buttons--inventory">
@@ -36,7 +36,7 @@ function Header({ getURL }) {
                         </button>
                     </div>
                 </nav>
-                <section className="header__sub-menu">
+                {/* <section className="header__sub-menu">
                     <h1 className="header__sub-menu-title">Warehouses</h1>
                     <div>
                         <input
@@ -50,7 +50,7 @@ function Header({ getURL }) {
                             + Add New Warehouse
                         </button>
                     </div>
-                </section>
+                </section> */}
             </header>
         </>
     );

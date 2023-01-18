@@ -6,6 +6,7 @@
 .header {
     display: flex;
     background-color: $instock-graphite;
+    height: 12.5rem;
     @include mobile {
         flex-direction: column;
         flex-wrap: wrap;
@@ -14,35 +15,89 @@
 
     @include tablet {
     }
+
     @include desktop {
     }
+    
     &__nav-menu {
         display: flex;
+        width: 100%;
         @include mobile {
             flex-direction: column;
-            flex-wrap: wrap;
+            align-items: center;
+        }
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-logos-container {
+        margin-top: 2rem;
+        display: flex;
+        @include mobile {
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-logo {
+        @include mobile {
+            margin-right: auto;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-buttons-container {
+        display: flex;
+        @include mobile {
+            margin-top: 2rem;
+            flex-direction: row;
             align-items: center;
         }
         @include tablet {
         }
         @include desktop {
         }
-        &__nav-logos-container {
-        }
-        &__nav-buttons-container {
-        }
-        &__nav-buttons--warehouse {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            padding: 0px 16px;
-            border-radius: 4px;
+    }
+
+    &__nav-buttons--warehouse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 164px;
+        height: 36px;
+        left: 16px;
+        top: 76px;
+        border-radius: 20px;
+        color: $instock-white;
+        background-color: $instock-black;
+        &:hover {
             background-color: $instock-blue;
-            &:hover {
-                background-color: $instock-black;
-            }
         }
+        &:active{
+            background-color: $instock-graphite
+        }
+    }
+
+    &__nav-buttons--inventory {
+        width: 163px;
+        height: 20px;
+        left: 196px;
+        top: 84px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        background: none;
+        color: $instock-cloud;
     }
 
     &__sub-menu {

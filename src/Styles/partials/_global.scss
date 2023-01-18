@@ -1,6 +1,6 @@
 @use "variable" as *;
 @use "typography" as *;
-@use "mixin" as *;
+@use "mixins" as *;
 
 * {
     margin: unset;
@@ -12,6 +12,7 @@
 }
 
 header {
+    padding: 0rem 5rem;
 }
 
 section {
@@ -21,13 +22,22 @@ h1 {
 }
 
 h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $instock-slate;
 }
 
 h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $instock-blue;
 }
 
 p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $instock-black;
 }
 
-footer{
+footer {
 }
