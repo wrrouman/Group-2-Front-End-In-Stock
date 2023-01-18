@@ -1,0 +1,191 @@
+@media screen and (min-device-width: 0px){
+    .Warehouse-Details__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0.0625rem solid black;
+    }
+
+    .Warehouse-Details__header {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 0.0625rem solid black;
+        height: 92px;
+        align-items: center;
+    }
+
+    .Warehouse-Details__header--arrowbackicon {
+        margin-left: 28px;
+    }
+
+    .Warehouse-Details__header--warehouse-name {
+        font-size: 1.75rem;
+        margin-left: 12px;
+        font-weight: bold;
+    }
+
+    .Warehouse-Details__header--edit {
+        background-color: blue;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+    }
+
+    .Warehouse-Details__header--editicon-link {
+        width: 24px;
+        height: 24px;
+    }
+
+    .editicon {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        -webkit-mask-image: url(../../assets/Icons/edit-24px.svg);
+        mask-image: url(../../assets/Icons/edit-24px.svg);
+    }
+
+    .Warehouse-Details__header--editicon-description {
+        display: none;
+    }
+
+    .Warehouse-Details__block {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.0625rem solid black;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    .Warehouse-Details__block--address {
+        padding-bottom: 36px;
+    }
+
+    .Warehouse-Details__block--title {
+        font-size: 11px;
+        color: #5C667E;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Details__block--content {
+        font-size: 13px;
+        color: #13182C;
+    }
+
+    .Warehouse-Details__block--contact {
+        display: flex;
+        flex-direction: row;
+        gap: 3.125rem;
+    }
+
+}
+
+@media screen and (min-device-width: 768px){
+    .Warehouse-Details__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 32px;
+        margin-right: 32px;
+        width: 704px;
+        border: 0.0625rem solid black;
+    }
+
+    .Warehouse-Details__header--warehouse-name {
+        font-size: 32px;
+        margin-left: 12px;
+        font-weight: bold;
+    }
+
+    .Warehouse-Details__header--edit {
+        width: 81px;
+        height: 38px;
+        border-radius: 20px;
+        margin-left: 361px;
+        justify-content: center;
+
+    }
+
+    .Warehouse-Details__header--editicon-link {
+        display: flex;
+        flex-direction: row;
+        width: 49px;
+        height: 22px;
+    }
+
+    .Warehouse-Details__header--editicon-description {
+        display: flex;
+        color: white;
+    }
+
+    .Warehouse-Details__block {
+        display: flex;
+        flex-direction: row;
+        gap: 0rem;
+        border-bottom: none;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .Warehouse-Details__block--title {
+        font-size: 12px;
+    }
+
+    .Warehouse-Details__block--content {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .Warehouse-Details__block--address {
+        border-right: 0.0625rem solid black;
+        padding-right: 121px;
+        padding-bottom: 0px;
+    }
+
+    .Warehouse-Details__block--contact {
+        gap: 24px;
+    }
+
+    .Warehouse-Details__block--contact-name {
+        padding-left: 40px;
+    }
+
+
+}
+
+@media screen and (min-device-width: 1280px){
+    .Warehouse-Details__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 130px;
+        margin-right: 130px;
+        width: 1020px;
+
+    }
+
+    .Warehouse-Details__header--warehouse-name {
+        font-size: 32px;
+    }
+
+    .Warehouse-Details__header--edit {
+        margin-left: 661px;
+    }
+
+    .Warehouse-Details__block--address {
+        padding-right: 225px;
+    }
+
+    .Warehouse-Details__block--contact-info {
+        padding-left: 100px;
+    }
+}

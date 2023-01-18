@@ -1,0 +1,67 @@
+@media screen and (min-device-width: 0px){
+    .Inventory-List__allinfo--tablettitlegroup {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Inventory-List__allinfo--tablettitlegroup {
+        display: flex;
+        flex-direction: row;
+        padding-left: 32px;
+        padding-right: 32px;
+        background-color: #F7F8F9;
+        height: 40px;
+    }
+
+    .Inventory-List__allinfo--tablettitle-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Inventory-List__allinfo--tablettitle {
+        font-size: 12px;
+    }
+
+    .Inventory-List__tablettitle--inventoryitem {
+        width: 120px;
+    }
+
+    .Inventory-List__tablettitle--category {
+        padding-left: 32px;
+        width: 70px;
+    }
+
+    .Inventory-List__tablettitle--status {
+        padding-left: 60px;
+        width: 75px;
+    }
+
+    .Inventory-List__tablettitle--qty {
+        padding-left: 125px;
+        width: 30px;
+    }
+
+    .Inventory-List__tablettitle--action {
+        margin-left: 70px;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Inventory-List__tablettitle--category {
+        padding-left: 114px;
+    }
+
+    .Inventory-List__tablettitle--status {
+        padding-left: 102px;
+    }
+
+    .Inventory-List__tablettitle--qty {
+        padding-left: 205px;
+    }
+
+    .Inventory-List__tablettitle--action {
+        margin-left: 150px;
+    }
+}

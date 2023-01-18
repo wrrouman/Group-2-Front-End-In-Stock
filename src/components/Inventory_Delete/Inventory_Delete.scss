@@ -1,0 +1,123 @@
+@media screen and (min-device-width: 0px){
+    .Inventory-Delete__page {
+        margin-left: -17px;
+        margin-right: -17px;
+        border: 0.0625rem solid black;
+        background-color: #FFFFFF;
+        width: 375px;
+        height: 667px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .Inventory-Delete__closeicon {
+        margin-left: 340px;
+        margin-top: 21px;
+    }
+
+    .Inventory-Delete__block {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 381px;
+    }
+
+    .Inventory-Delete__block--title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .Inventory-Delete__block--description {
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+    .Inventory-Delete__block--button {
+        display: flex;
+        flex-direction: row;
+        gap: 17px;
+    }
+
+    .Inventory-Delete__block--button-cancel {
+        width: 163px;
+        height: 36px;
+        border-radius: 20px;
+        margin-left: 16px;
+    }
+
+    .Inventory-Delete__block--button-delete {
+        width: 163px;
+        height: 36px;
+        border-radius: 20px;
+        background-color: #C94515;
+        color: white;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Inventory-Delete__page {
+        position: absolute;
+        top: 185px;
+        left: 48px;
+        right: 48px;
+        background-color: #FFFFFF;
+        width: 670px;
+        height: 260px;
+        margin: 0px;
+    }
+
+    .Inventory-Delete__closeicon {
+        margin-left: 637px;
+        margin-top: 21px;
+    }
+
+    .Inventory-Delete__block {
+        margin-left: 64px;
+        margin-right: 64px;
+        margin-bottom: 32px;
+    }
+
+    .Inventory-Delete__block--title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .Inventory-Delete__block--description {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .Inventory-Delete__block--button {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .Inventory-Delete__block--button-cancel {
+        width: 72px;
+        height: 38px;
+        border-radius: 20px;
+        margin-left: 449px;
+    }
+
+    .Inventory-Delete__block--button-delete {
+        width: 72px;
+        height: 38px;
+        border-radius: 20px;
+        background-color: #C94515;
+        color: white;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Inventory-Delete__page {
+        position: absolute;
+        top: 185px;
+        left: 304px;
+        right: 304px;
+        background-color: #FFFFFF;
+        width: 670px;
+        height: 260px;
+        margin: 0px;
+    }
+}
