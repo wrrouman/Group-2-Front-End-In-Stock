@@ -42,6 +42,14 @@
         height: 24px;
     }
 
+    .editicon {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        -webkit-mask-image: url(../../assets/Icons/edit-24px.svg);
+        mask-image: url(../../assets/Icons/edit-24px.svg);
+    }
+
     .Warehouse-Details__header--editicon-description {
         display: none;
     }
@@ -108,7 +116,6 @@
     .Warehouse-Details__header--editicon-link {
         display: flex;
         flex-direction: row;
-        gap: 3px;
         width: 49px;
         height: 22px;
     }

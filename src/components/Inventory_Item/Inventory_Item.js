@@ -25,7 +25,7 @@ function Inventory_Item(props) {
                         <div className="Inventory-Item__allinfo--infoblock  Inventory-Item__tablettitle--inventoryitem">
                             <p className="Inventory-Item__allinfo--mobiletitle">INVENTORY ITEM</p>
                             <div className="Inventory-Item__allinfo--name">
-                                <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.itemName}</p>
+                                <p className="Inventory-Item__allinfo--info Inventory-Item__allinfo--itemName">{props.Inventory_ItemInfo.itemName}</p>
                                 <img src={Chevron_Right} className="Inventory-Item__allinfo--chevronrighticon"/>
                             </div>
                         </div>

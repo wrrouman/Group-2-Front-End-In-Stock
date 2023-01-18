@@ -30,6 +30,10 @@
         
     }
 
+    .Inventory-Item__allinfo--itemName {
+        color: #2E66E5;
+    }
+
     .Inventory-Item__allinfo--mobiletitle {
         font-size: 11px;
         color: #5C667E;
@@ -39,6 +43,7 @@
     .Inventory-Item__allinfo--name {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
     .Inventory-Item__action {
@@ -71,6 +76,7 @@
         display: flex;
         flex-direction: row;
         gap: 0px;
+        align-items: center;
     }
 
     .Inventory-Item__allinfo--infoblock {

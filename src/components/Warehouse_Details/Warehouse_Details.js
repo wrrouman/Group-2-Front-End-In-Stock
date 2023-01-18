@@ -26,7 +26,8 @@ function Warehouse_Details (props) {
                     <div className="Warehouse-Details__header--edit">
                         <NavLink to={`/edit_warehouse/123`} className="Warehouse-Details__header--editicon-link">
                         {/* <NavLink to={`/edit/${warehouseID}`}> */}
-                            <img src={Edit} className="Warehouse-Details__header--editicon"/>
+                            {/* <img src={Edit} className="Warehouse-Details__header--editicon"/> */}
+                            <div className="editicon Warehouse-Details__header--editicon"></div>
                             <p className="Warehouse-Details__header--editicon-description">Edit</p>
                             
                         </NavLink>

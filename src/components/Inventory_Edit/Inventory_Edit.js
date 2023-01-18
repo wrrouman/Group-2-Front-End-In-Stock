@@ -9,7 +9,7 @@ function Inventory_Edit() {
 
     return(
         <>
-            <p>{ inventoryID }</p>
+            {/* <p>{ inventoryID }</p> */}
             <div className="Inventory-Edit__page">
                 <div className="Inventory-Edit__header">
                     <NavLink to={`/warehouse_details/123`} className="Inventory-Edit__header--arrowbackicon-link">
