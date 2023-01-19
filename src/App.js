@@ -17,9 +17,15 @@ import Header from "./components/Header/Header.js";
 import Add_Warehouse from "./components/Add_Warehouse/Add_Warhouse";
 import Footer from "./components/footer/Footer";
 import Warehouse_List from "./components/Warehouse_List/Warehouse_List";
+import Warehouse_List_Sortbar from "./components/Warehouse_List_Sortbar/Warehouse_List_Sortbar";
+
 function App() {
     return (
         <>
+        <Header/>
+
+
+
             <BrowserRouter>
                 <Routes>
                     {/* return here to correct paths */}

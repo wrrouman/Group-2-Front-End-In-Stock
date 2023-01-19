@@ -60,7 +60,6 @@ function Warehouse_List({ getURL }) {
                     </aside>
                 </div>
                 <div>
-                    <h2 className="warehouse-list__title-actions">ACTIONS</h2>
                     <div className="warehouse-list__buttons-container">
                         <img src={PencilIcon} alt="PencilIcon"></img>
                         <img src={TrashIcon} alt="TrashIcon"></img>

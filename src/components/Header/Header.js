@@ -2,7 +2,6 @@ import "./Header.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
 import Logo from "../../assets/Logo/InStock-Logo_1x.png";
 
 function Header({ getURL }) {
@@ -11,7 +10,7 @@ function Header({ getURL }) {
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(getURL);
-            // setFeaturedState(request.data);
+            // setState(request.data);
         }
         fetchData();
     }, [getURL]);
