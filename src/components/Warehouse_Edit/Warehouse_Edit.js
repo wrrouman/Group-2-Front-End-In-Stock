@@ -58,12 +58,13 @@ function Warehouse_Edit() {
                     
 
                     <div className="Warehouse-Edit__buttonblock">
-                        <button className="Warehouse-Edit__cancelbutton">Cancel</button>
+                        <NavLink to={"/warehouse_details/123"}>
+                            <button className="Warehouse-Edit__cancelbutton">Cancel</button>
+                        </NavLink>
                         <button className="Warehouse-Edit__savebutton">Save</button>
                     </div>
 
                 </form>
-                <footer> footer is here</footer>
             </div>
             
         </>

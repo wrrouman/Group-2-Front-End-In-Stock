@@ -57,8 +57,6 @@ function Warehouse_Details (props) {
                 </div>
 
                 <Inventory_List/>
-
-                <footer> footer is here</footer>
             </div>
             
         </>

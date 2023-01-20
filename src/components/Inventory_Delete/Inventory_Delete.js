@@ -35,7 +35,7 @@ function Inventory_Delete(props) {
                 </div>
 
                 <div className="Inventory-Delete__block--button">
-                        <button className="Inventory-Delete__block--button-cancel">Cancel</button>
+                        <button className="Inventory-Delete__block--button-cancel" onClick={props.CloseDeletePopup}>Cancel</button>
                         <button className="Inventory-Delete__block--button-delete">Delete</button>
                 </div>
 

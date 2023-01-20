@@ -22,11 +22,8 @@ import Warehouse_List_Sortbar from "./components/Warehouse_List_Sortbar/Warehous
 function App() {
     return (
         <>
-        <Header/>
-
-
-
             <BrowserRouter>
+                <Header/>
                 <Routes>
                     {/* return here to correct paths */}
                     <Route path="placeholder1" element={<Header />} />

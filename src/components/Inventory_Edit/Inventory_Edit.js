@@ -74,12 +74,13 @@ function Inventory_Edit() {
                     </div>
                     
                     <div className="Inventory-Edit__block--editbutton">
-                        <button className="Inventory-Edit__editbutton--cancel">Cancel</button>
+                        <NavLink to={`/warehouse_details/123`}>
+                            <button className="Inventory-Edit__editbutton--cancel">Cancel</button>
+                        </NavLink>
                         <button className="Inventory-Edit__editbutton--save">Save</button>
                     </div>
 
                 </form>
-                <footer>footer is here</footer>
             </div>
             
 
