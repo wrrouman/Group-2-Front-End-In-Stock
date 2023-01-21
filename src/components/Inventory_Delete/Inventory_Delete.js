@@ -1,4 +1,5 @@
 import "./Inventory_Delete.scss";
+import axios from 'axios';
 import { useState, useEffect} from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 
@@ -11,6 +12,7 @@ import Warehouse_Json from "../../server/data/warehouses.json";
 
 function Inventory_Delete(props) {
     // let { inventoryID } = useParams();
+    const [ClickedDelete, setClickedDelete] = useState(false);
 
     // //useState variable
     // const [InventoryJson, setInventoryJson] = useState(Inventory_Json);
@@ -22,6 +24,27 @@ function Inventory_Delete(props) {
     // }, [inventoryID]);
 
     // console.log(CurrentInventoryJson[0]?.itemName);
+
+    // Delete an Inventory
+    useEffect(() => {
+        if (ClickedDelete === true) {
+            axios.delete(`http://localhost:8080/inventories/${props.CurrentInventoryId}`)
+            .then(res => {
+                console.log(res.status);
+                setClickedDelete(false);
+            })
+            .catch(err => console.log(err));
+            
+        }
+    }, [ClickedDelete])
+
+    const ClickDeleteButton = (event) => {
+        event.preventDefault();
+        console.log(event);
+        setClickedDelete(true);
+        props.CloseDeletePopup();
+    }
+
 
     return(
         <>
@@ -36,7 +59,7 @@ function Inventory_Delete(props) {
 
                 <div className="Inventory-Delete__block--button">
                         <button className="Inventory-Delete__block--button-cancel" onClick={props.CloseDeletePopup}>Cancel</button>
-                        <button className="Inventory-Delete__block--button-delete">Delete</button>
+                        <button className="Inventory-Delete__block--button-delete" onClick={ClickDeleteButton}>Delete</button>
                 </div>
 
             </div>

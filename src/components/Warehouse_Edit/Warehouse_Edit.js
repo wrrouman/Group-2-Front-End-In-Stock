@@ -12,8 +12,7 @@ function Warehouse_Edit() {
             {/* <p>{ warehouseID }</p> */}
             <div className="Warehouse-Edit__page">
                 <div className="Warehouse-Edit__header">
-                    <NavLink to={"/warehouse_details/123"} className="Warehouse-Edit__header--arrowbackicon-link">
-                    {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
+                    <NavLink to={`/warehouse_details/${warehouseID}`} className="Warehouse-Edit__header--arrowbackicon-link">
                         <img src={Arrow_Back} className="Warehouse-Edit__header--arrowbackicon"/>
                     </NavLink>
 
@@ -58,7 +57,7 @@ function Warehouse_Edit() {
                     
 
                     <div className="Warehouse-Edit__buttonblock">
-                        <NavLink to={"/warehouse_details/123"}>
+                        <NavLink to={`/warehouse_details/${warehouseID}`}>
                             <button className="Warehouse-Edit__cancelbutton">Cancel</button>
                         </NavLink>
                         <button className="Warehouse-Edit__savebutton">Save</button>

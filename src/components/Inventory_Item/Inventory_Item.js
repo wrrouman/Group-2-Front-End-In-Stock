@@ -61,7 +61,7 @@ function Inventory_Item(props) {
                         </NavLink>
                     </div>
                 </div>
-                <div>{ ShowDeletePopup ? <Inventory_Delete Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} /> : null }</div>
+                <div>{ ShowDeletePopup ? <Inventory_Delete Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} CurrentInventoryId={props.Inventory_ItemInfo.id} /> : null }</div>
             </div>
         </>
     );

@@ -4,7 +4,7 @@ import { NavLink, useParams } from 'react-router-dom';
 //import images
 import Arrow_back from "../../assets/Icons/arrow_back-24px.svg";
 
-function Inventory_Edit() {
+function Inventory_Edit(props) {
     let { inventoryID } = useParams();
 
     return(
@@ -12,7 +12,7 @@ function Inventory_Edit() {
             {/* <p>{ inventoryID }</p> */}
             <div className="Inventory-Edit__page">
                 <div className="Inventory-Edit__header">
-                    <NavLink to={`/warehouse_details/123`} className="Inventory-Edit__header--arrowbackicon-link">
+                    <NavLink to={`/warehouse_details/${props.CurrentWarehouseId}`} className="Inventory-Edit__header--arrowbackicon-link">
                     {/* <NavLink to={`/warehouse_details/${warehouseID}`}> */}
                         <img src={Arrow_back} className="Inventory-Edit__header--arrowbackicon"/>
                     </NavLink>
@@ -74,7 +74,7 @@ function Inventory_Edit() {
                     </div>
                     
                     <div className="Inventory-Edit__block--editbutton">
-                        <NavLink to={`/warehouse_details/123`}>
+                        <NavLink to={`/warehouse_details/${props.CurrentWarehouseId}`}>
                             <button className="Inventory-Edit__editbutton--cancel">Cancel</button>
                         </NavLink>
                         <button className="Inventory-Edit__editbutton--save">Save</button>
