@@ -21,7 +21,9 @@ function Warehouse_Details (props) {
             {/* <p>{warehouseID}</p> */}
             <div className="Warehouse-Details__page">
                 <div className="Warehouse-Details__header">
-                    <img src={Arrow_back} className="Warehouse-Details__header--arrowbackicon"/>
+                    <NavLink to={`/home`}>
+                        <img src={Arrow_back} className="Warehouse-Details__header--arrowbackicon"/>
+                    </NavLink>
                     <p className="Warehouse-Details__header--warehouse-name">Washington</p>
                     <div className="Warehouse-Details__header--edit">
                         <NavLink to={`/edit_warehouse/123`} className="Warehouse-Details__header--editicon-link">
