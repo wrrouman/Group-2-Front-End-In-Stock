@@ -26,24 +26,27 @@ function Inventory_Delete(props) {
     // console.log(CurrentInventoryJson[0]?.itemName);
 
     // Delete an Inventory
-    useEffect(() => {
-        if (ClickedDelete === true) {
-            axios.delete(`http://localhost:8080/inventories/${props.CurrentInventoryId}`)
-            .then(res => {
-                console.log(res.status);
-                setClickedDelete(false);
-            })
-            .catch(err => console.log(err));
+    // useEffect(() => {
+    //     if (ClickedDelete === true) {
+    //         axios.delete(`http://localhost:8080/inventories/9b4f79ea-0e6c-4e59-8e05-afd933d0b3d3`)
+    //         .then(res => {
+    //             console.log(props.CurrentInventoryId);
+    //             console.log(res.status);
+    //             setClickedDelete(false);
+    //         })
+    //         // .catch(err => console.log(err));
             
-        }
-    }, [ClickedDelete])
+    //     }
+    // }, [ClickedDelete])
 
-    const ClickDeleteButton = (event) => {
-        event.preventDefault();
-        console.log(event);
-        setClickedDelete(true);
-        props.CloseDeletePopup();
-    }
+    // const ClickDeleteButton = (event) => {
+    //     event.preventDefault();
+    //     console.log(event);
+    //     setClickedDelete(true);
+    //     props.CloseDeletePopup();
+    // }
+
+    // console.log(props.CurrentInventoryId);
 
 
     return(
@@ -59,7 +62,7 @@ function Inventory_Delete(props) {
 
                 <div className="Inventory-Delete__block--button">
                         <button className="Inventory-Delete__block--button-cancel" onClick={props.CloseDeletePopup}>Cancel</button>
-                        <button className="Inventory-Delete__block--button-delete" onClick={ClickDeleteButton}>Delete</button>
+                        <button className="Inventory-Delete__block--button-delete" onClick={props.ClickDeleteButton}>Delete</button>
                 </div>
 
             </div>

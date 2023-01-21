@@ -13,6 +13,7 @@ function Inventory_List(props) {
     // const [InventoryJson, setInventoryJson] = useState(Inventory_Json); 
     // const [CurrentWarehouse, setCurrentWarehouse] = useState("Washington");
     const [CurrentWarehouseInventory, setCurrentWarehouseInventory] = useState([]);
+    const [InventoryListUpdate, setInventoryListUpdate] = useState(false);
 
     // useEffect(() => {
     //     const current_inventory = props.AllInventoriesInfo.filter(x => x.warehouseId === props.CurrentWarehouse.id);
@@ -27,12 +28,13 @@ function Inventory_List(props) {
             .then((element) => {
                 let inventories_for_a_warehouse_info = element.data;
                 setCurrentWarehouseInventory(inventories_for_a_warehouse_info);
+                setInventoryListUpdate(false);
             })
         }
             
         GetInventoriesFromAWarehouseInfo();
 
-    }, [props.warehouseID])
+    }, [props.warehouseID, InventoryListUpdate])
 
     return(
         <>
@@ -64,7 +66,7 @@ function Inventory_List(props) {
 
             <section>{
                 CurrentWarehouseInventory.map((inventory) => (
-                    <Inventory_Item Inventory_ItemInfo={inventory} />
+                    <Inventory_Item Inventory_ItemInfo={inventory} setInventoryListUpdate={setInventoryListUpdate} />
                 ))
             }</section>
 

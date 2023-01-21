@@ -1,5 +1,6 @@
 import './Inventory_Item.scss';
-import { useState } from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //import images
@@ -16,6 +17,28 @@ function Inventory_Item(props) {
     const OpenDeletePopup = () => { setShowDeletePopup(true)};
     const CloseDeletePopup = () => { setShowDeletePopup(false)};
 
+
+    const [ClickedDelete, setClickedDelete] = useState(false);
+    // Delete an Inventory
+    useEffect(() => {
+        if (ClickedDelete === true) {
+            axios.delete(`http://localhost:8080/inventories/${props.Inventory_ItemInfo.id}`)
+            .then(res => {
+                console.log(props.Inventory_ItemInfo.id);
+                console.log(res.status);
+                setClickedDelete(false);
+            })
+            // .catch(err => console.log(err));
+            
+        }
+    }, [ClickedDelete])
+
+    const ClickDeleteButton = (event) => {
+        event.preventDefault();
+        setClickedDelete(true);
+        props.setInventoryListUpdate(true);
+        CloseDeletePopup();
+    }
 
     return(
         <>
@@ -56,12 +79,12 @@ function Inventory_Item(props) {
                         <img src={Delete_Outline} className="Inventory-Item__action--deleteicon" onClick={OpenDeletePopup}/>
 
 
-                        <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.id}`}>
+                        <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.warehouseID}/${props.Inventory_ItemInfo.id}`}>
                             <img src={Edit} className="Inventory-Item__action--editicon"/>
                         </NavLink>
                     </div>
                 </div>
-                <div>{ ShowDeletePopup ? <Inventory_Delete Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} CurrentInventoryId={props.Inventory_ItemInfo.id} /> : null }</div>
+                <div>{ ShowDeletePopup ? <Inventory_Delete ClickDeleteButton={ClickDeleteButton} Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} CurrentInventoryId={props.Inventory_ItemInfo.id} /> : null }</div>
             </div>
         </>
     );

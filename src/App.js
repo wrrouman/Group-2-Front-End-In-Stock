@@ -79,8 +79,8 @@ function App() {
                 <Header/>
                 <Routes>
                     {/* return here to correct paths */}
-                    <Route path="placeholder1" element={<Header />} />
-                    <Route path="Add" element={<Add_Warehouse />} />
+                    {/* <Route path="placeholder1" element={<Header />} />
+                    <Route path="Add" element={<Add_Warehouse />} /> */}
 
                     <Route 
                         path="/" 
@@ -107,11 +107,9 @@ function App() {
                         element={<Warehouse_Edit />}
                     />
                     <Route
-                        path="/edit_inventoryitems/:inventoryID"
+                        path="/edit_inventoryitems/:warehouseID/:inventoryID"
                         element={
-                            <Inventory_Edit 
-                                CurrentWarehouseId={CurrentWarehouseId}
-                            />
+                            <Inventory_Edit/>
                         }
                     />
                     {/* End of Howard's Component */}
