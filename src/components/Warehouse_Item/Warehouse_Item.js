@@ -22,7 +22,7 @@ function Warehouse_Item(props) {
                                 <img className="warehouse-list__sort-icon" src={SortIcon} alt='SortIcon'></img>
                             </div>
                             <div className="warehouse-list__location-container">
-                                <NavLink to={`/warehouse_details/${props.SingleWarehouseInfo.id}`}>
+                                <NavLink to={`/warehouse_details/${props.SingleWarehouseInfo.id}`} className="warehouse-list__location-containerlink">
                                     <h3>{props.SingleWarehouseInfo.name}</h3>
                                     <img src={LessThanIcon}></img>
                                 </NavLink>
