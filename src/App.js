@@ -18,13 +18,15 @@ import Add_Warehouse from "./components/Add_Warehouse/Add_Warhouse";
 import Footer from "./components/footer/Footer";
 import Warehouse_List from "./components/Warehouse_List/Warehouse_List";
 import Warehouse_List_Sortbar from "./components/Warehouse_List_Sortbar/Warehouse_List_Sortbar";
+import Inventory_Item_Details from "./components/Inventory_Item_Details/Inventory_Item_Details";
 
 function App() {
     return (
         <>
-        <Header/>
-
-
+            <Header />
+            <Inventory_Item_Details />
+            <Warehouse_List_Sortbar />
+            <Warehouse_List />
 
             <BrowserRouter>
                 <Routes>

@@ -59,11 +59,9 @@ function Warehouse_List({ getURL }) {
                         </div>
                     </aside>
                 </div>
-                <div>
-                    <div className="warehouse-list__buttons-container">
-                        <img src={PencilIcon} alt="PencilIcon"></img>
-                        <img src={TrashIcon} alt="TrashIcon"></img>
-                    </div>
+                <div className="warehouse-list__buttons-container">
+                    <img src={PencilIcon} alt="PencilIcon"></img>
+                    <img src={TrashIcon} alt="TrashIcon"></img>
                 </div>
             </section>
         </>

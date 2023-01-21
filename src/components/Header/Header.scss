@@ -63,9 +63,10 @@
             margin-top: 2rem;
             flex-direction: row;
             align-items: center;
-            justify-content: right;
+            justify-content: center;
         }
         @include tablet {
+            justify-content: right;
         }
         @include desktop {
         }
