@@ -60,8 +60,8 @@ function Warehouse_List({ getURL }) {
                     </aside>
                 </div>
                 <div className="warehouse-list__buttons-container">
-                    <img src={PencilIcon} alt="PencilIcon"></img>
                     <img src={TrashIcon} alt="TrashIcon"></img>
+                    <img src={PencilIcon} alt="PencilIcon"></img>
                 </div>
             </section>
         </>

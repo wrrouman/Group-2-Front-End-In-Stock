@@ -1,4 +1,4 @@
-import "./Inventory_Item_Details.scss";
+import "./Inventory_List_Add_New_Inventory.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -10,8 +10,8 @@ import PencilIcon from "../../assets/Icons/edit-24px.svg";
 import LessThanIcon from "../../assets/Icons/chevron_right-24px.svg";
 import SortIcon from "../../assets/Icons/sort-24px.svg";
 
-function Inventory_Item_Details({ getURL }) {
-    const [inventoryItemDetailsState, setInventoryItemDetailsState] = useState(
+function InventoryListAddNewInventory({ getURL }) {
+    const [inventoryListState, setInventoryListState] = useState(
         []
     );
 
@@ -25,19 +25,22 @@ function Inventory_Item_Details({ getURL }) {
 
     return (
         <>
-            <section className="inventory-item-details">
-                <div className="inventory-item-details__details-container">
-                    <aside className="inventory-item-details__details-container--left">
+            <section className="inventory-list">
+                <div className="inventory-list__details-container">
+                    <aside className="inventory-list__details-container--left">
                         <div>
-                            <h2>INVENTORY DESCRIPTION:</h2>
-                            <p>Placeholder Item DESC Placeholder Item DESC Placeholder Item DESC Placeholder Item DESC</p>
+                            <h2>INVENTORY ITEM</h2>
+                            <div className="inventory-list__item-name-container">
+                                <h3>Placeholder Item</h3>
+                                <img src={LessThanIcon}></img>
+                            </div>
                         </div>
                         <div>
                             <h2>CATEGORY</h2>
                             <p>Placeholder Category</p>
                         </div>
                     </aside>
-                    <aside className="inventory-item-details__details-container--right">
+                    <aside className="inventory-list__details-container--right">
                         <div>
                             <h2>STATUS</h2>
                             <button>IN STOCK</button>
@@ -52,8 +55,12 @@ function Inventory_Item_Details({ getURL }) {
                         </div>
                     </aside>
                 </div>
+                <div className="inventory-list__buttons-container">
+                    <img src={TrashIcon} alt="TrashIcon"></img>
+                    <img src={PencilIcon} alt="PencilIcon"></img>
+                </div>
             </section>
         </>
     );
 }
-export default Inventory_Item_Details;
+export default InventoryListAddNewInventory;
