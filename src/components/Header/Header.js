@@ -1,6 +1,6 @@
 import "./Header.scss";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import axios from "axios";
 import Logo from "../../assets/Logo/InStock-Logo_1x.png";
 
@@ -20,11 +20,14 @@ function Header({ getURL }) {
             <header className="header">
                 <nav className="header__nav-menu">
                     <div className="header__nav-logos-container">
-                        <img
-                            className="header__nav-logo"
-                            src={Logo}
-                            alt="sync-icon"
-                        ></img>
+                        <NavLink to={"/"}>
+                            <img
+                                className="header__nav-logo"
+                                src={Logo}
+                                alt="sync-icon"
+                            ></img>
+                        </NavLink>
+
                     </div>
                     <div className="header__nav-buttons-container">
                         <button className="header__nav-buttons--warehouse ">
