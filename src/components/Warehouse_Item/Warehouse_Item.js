@@ -58,7 +58,9 @@ function Warehouse_Item(props) {
                 <div>
                     <div className="warehouse-list__buttons-container">
                         <img src={TrashIcon} alt="TrashIcon" className="warehouse-list__buttons--trash"></img>
-                        <img src={PencilIcon} alt="PencilIcon" className="warehouse-list__buttons--pencil"></img>
+                        <NavLink to={`/edit_warehouse/${props.SingleWarehouseInfo.id}`}>
+                            <img src={PencilIcon} alt="PencilIcon" className="warehouse-list__buttons--pencil"></img>
+                        </NavLink>
                     </div>
                 </div>
         </>
