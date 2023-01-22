@@ -1,0 +1,232 @@
+@media screen and (min-device-width: 0px){
+    input, textarea, select, button {
+        border: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0.0625rem solid black;
+        background-color: white;
+    }
+
+    .Warehouse-Edit__header {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 0.0625rem solid black;
+        height: 92px;
+        align-items: center;
+    }
+
+    .Warehouse-Edit__header--arrowbackicon-link {
+        width: 24px;
+        height: 24px;
+        margin-left: 28px;
+    }
+
+
+    .Warehouse-Edit__header--title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 12px;
+    }
+
+    .Warehouse-Edit__formblock--title {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 24px;
+    }
+
+    .Warehouse-Edit__formblock--warehouse-details {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__warehouse-details--title {
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Edit__warehouse-details--input {
+        width: 280px;
+        height: 20px;
+        border-radius: 20px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__formblock--contact-details {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__contact-details--title {
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Edit__contact-details--input {
+        width: 280px;
+        height: 20px;
+        border-radius: 20px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__buttonblock {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 17px;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__cancelbutton {
+        padding: 8px 51px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    .Warehouse-Edit__savebutton {
+        padding: 8px 51px;
+        font-size: 13px;
+        border-radius: 20px;
+        color: white;
+        background-color: #2E66E5;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Warehouse-Edit__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        // border: none;
+    }
+    
+    .Warehouse-Edit__header {
+        // margin-left: 1.5rem;
+        // margin-right: 1.5rem;
+        border-bottom: 0.0625rem solid black;
+        // border: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__header--title {
+        font-size: 32px;
+    }
+
+    .Warehouse-Edit__formblock--title {
+        font-size: 24px;
+    }
+
+    // .Warehouse-Edit__form {
+    //     margin-left: 1.5rem;
+    //     margin-right: 1.5rem;
+    //     border: 0.0625rem solid black;
+    // }
+
+    .Warehouse-Edit__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .Warehouse-Edit__formblock--warehouse-details {
+        border-bottom: none;
+        border-right: 0.0625rem solid black;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    .Warehouse-Edit__warehouse-details--title {
+        font-size: 14px;
+    }
+
+    .Warehouse-Edit__formblock--contact-details {
+        border-bottom: none;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    .Warehouse-Edit__buttonblock {
+        background-color: #F7F8F9B2;
+        border: 1px solid black;
+    }
+
+    .Warehouse-Edit__cancelbutton {
+        margin-left: 523px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .Warehouse-Edit__savebutton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Warehouse-Edit__page {
+        width: 1020px;
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+
+    .Warehouse-Edit__formblock--warehouse-details {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__warehouse-details--input {
+        width: 429px;
+    }
+
+    .Warehouse-Edit__formblock--contact-details {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__contact-details--input {
+        width: 429px;
+    }
+
+    .Warehouse-Edit__cancelbutton {
+        margin-left: 830px;
+    }
+
+}

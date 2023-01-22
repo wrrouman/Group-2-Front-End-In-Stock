@@ -1,0 +1,34 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.warehouse-list-sortbar {
+    background-color: rgba(247, 248, 249, 0.7);
+    padding: 0rem 5rem;
+
+    &__options-container {
+        display: none;
+        @include mobile {
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {
+        }
+    }
+
+    &__sort-options{
+        @include mobile {
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {      
+        }
+    }
+}

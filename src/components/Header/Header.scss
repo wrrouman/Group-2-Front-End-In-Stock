@@ -1,3 +1,126 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
 .header {
     display: flex;
+    background-color: $instock-graphite;
+    height: 12.5rem;
+    @include mobile {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0rem 2.5rem;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+
+    &__nav-menu {
+        display: flex;
+        width: 100%;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-logos-container {
+        margin-top: 2rem;
+        display: flex;
+        @include mobile {
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-logo {
+        @include mobile {
+            margin-right: auto;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-buttons-container {
+        display: flex;
+        width: 100%;
+        @include mobile {
+            margin-top: 2rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        @include tablet {
+            justify-content: right;
+        }
+        @include desktop {
+        }
+    }
+
+    &__nav-buttons--warehouse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        background: none;
+        color: $instock-cloud;
+        &:hover {
+            background-color: $instock-blue;
+            color: $instock-white;
+        }
+        &:active {
+            background-color: $instock-black;
+            color: $instock-white;
+        }
+    }
+
+    &__nav-buttons--inventory {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        background: none;
+        color: $instock-cloud;
+        &:hover {
+            background-color: $instock-blue;
+            color: $instock-white;
+        }
+        &:active {
+            background-color: $instock-black;
+            color: $instock-white;
+        }
+    }
+
+    &__sub-menu {
+        background-color: $instock-white;
+    }
 }

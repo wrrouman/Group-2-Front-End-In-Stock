@@ -1,0 +1,147 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.warehouse-list {
+    display: flex;
+    border-top: 0.1rem solid $instock-cloud;
+    @include mobile {
+        flex-direction: column;
+        padding: 1rem 2.5rem;
+        gap: 1rem;
+    }
+    @include tablet {
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include desktop {
+    }
+
+    &__details-container {
+        display: flex;
+        @include mobile {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__details-container--left {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        @include tablet {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {
+        }
+    }
+
+    &__menu-quadrants {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__menu-options {
+        display: flex;
+        @include mobile {
+        }
+        @include tablet {
+            display: none;
+        }
+        @include desktop {
+        }
+    }
+
+    &__sort-icon {
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            display: block;
+        }
+        @include desktop {
+        }
+    }
+
+    &__location-container {
+        display: flex;
+        @include mobile {
+            flex-direction: row;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__details-container--right {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        @include tablet {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop {
+        }
+    }
+
+    &__buttons-container {
+        display: flex;
+        @include mobile {
+            height: 3rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}
+
+
+//
+.warehouse-list {
+    &__location-containerlink {
+        display: flex;
+        @include mobile {
+            flex-direction: row;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__buttons--trash, &__buttons--pencil {
+        width: 24px;
+        height: 24px;
+        @include mobile {
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+}
