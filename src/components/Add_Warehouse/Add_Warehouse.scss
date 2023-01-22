@@ -4,126 +4,291 @@
 @use "../../styles/partials/variable" as *;
 
 
+// @media screen and (min-device-width: 0px){
+//     input, textarea, select, button {
+//         border: 0.0625rem solid black;
+//     }
+
+//     .warehouse_add_popup{
+//         margin-top: 1.875rem;
+
+//         margin-left: 1rem;
+//         margin-right: 1rem;
+//         border: 0.0625rem solid black;
+//         background-color: white;
+    
+//     }
+//     .warehouse_add_header{
+//         display: flex;
+//         justify-content: center;
+//         padding-top: 1rem;
+//         padding-bottom: 1rem;
+//         border-bottom: 1px solid $instock-cloud;
+//     }
+
+// @media screen and (min-device-width: 768px){
+   
+// }
+// @media screen and (min-device-width: 1280px){
+   
+
+// }
+// }
+
 @media screen and (min-device-width: 0px){
-    .Inventory-Delete__page {
-        margin-left: -17px;
-        margin-right: -17px;
-        border: 0.0625rem solid black;
-        background-color: #FFFFFF;
-        width: 375px;
-        height: 667px;
-        position: absolute;
-        top: 0px;
+    input, textarea, select, button {
+        border: 0.0625rem solid $instock-cloud;
+        border-radius: 20px;
+        height: 36px;
+        padding-left: 1rem
     }
 
-    .Inventory-Delete__closeicon {
-        margin-left: 340px;
-        margin-top: 21px;
+    
+
+    .warehouse_add_popup {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+        // border: 0.0625rem solid black;
+        background-color: white;
     }
 
-    .Inventory-Delete__block {
-        margin-left: 16px;
-        margin-right: 16px;
-        margin-bottom: 381px;
+    .warehouse_add_header {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 0.0625rem solid black;
+        height: 92px;
+        align-items: center;
+        justify-content: center;
     }
 
-    .Inventory-Delete__block--title {
+    .warehouse_add_block1{
+        display: flex;
+        flex-direction: column;
+        padding: .5rem
+    }
+
+    .warehouse_add_block2{
+        display: flex;
+        flex-direction: column;
+        padding: .5rem 
+    }
+
+    .warehouse_addbutton_block{
+        padding:.5rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .Warehouse-Edit__header--arrowbackicon-link {
+        width: 24px;
+        height: 24px;
+        margin-left: 28px;
+    }
+
+
+    .Warehouse-Edit__header--title {
         font-size: 28px;
         font-weight: bold;
+        margin-left: 12px;
+    }
+
+    .Warehouse-Edit__formblock--title {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 24px;
+    }
+
+    .Warehouse-Edit__formblock--warehouse-details {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.0625rem solid black;
+    }
+
+    .Warehouse-Edit__warehouse-details--title {
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Edit__warehouse-details--input {
+        width: 280px;
+        height: 20px;
+        border-radius: 20px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         margin-bottom: 16px;
     }
 
-    .Inventory-Delete__block--description {
-        font-size: 15px;
-        font-weight: normal;
+    .Warehouse-Edit__formblock--contact-details {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
     }
 
-    .Inventory-Delete__block--button {
+    .Warehouse-Edit__contact-details--title {
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 4px;
+    }
+
+    .Warehouse-Edit__contact-details--input {
+        width: 280px;
+        height: 20px;
+        border-radius: 20px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__buttonblock {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 16px;
+        padding-bottom: 16px;
         display: flex;
         flex-direction: row;
         gap: 17px;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.0625rem solid black;
     }
 
-    .Inventory-Delete__block--button-cancel {
-        width: 163px;
-        height: 36px;
+    .Warehouse-Edit__cancelbutton {
+        padding: 8px 51px;
+        font-size: 13px;
         border-radius: 20px;
-        margin-left: 16px;
     }
 
-    .Inventory-Delete__block--button-delete {
-        width: 163px;
-        height: 36px;
+    .Warehouse-Edit__savebutton {
+        padding: 8px 51px;
+        font-size: 13px;
         border-radius: 20px;
-        background-color: #C94515;
         color: white;
+        background-color: #2E66E5;
     }
 }
 
 @media screen and (min-device-width: 768px){
-    .Inventory-Delete__page {
-        position: absolute;
-        top: 185px;
-        left: 48px;
-        right: 48px;
-        background-color: #FFFFFF;
-        width: 670px;
-        height: 260px;
-        margin: 0px;
+    .Warehouse-Edit__page {
+        // move later
+        margin-top: 1.875rem;
+
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        // border: none;
+    }
+    
+    .Warehouse-Edit__header {
+        // margin-left: 1.5rem;
+        // margin-right: 1.5rem;
+        border-bottom: 0.0625rem solid black;
+        // border: 0.0625rem solid black;
     }
 
-    .Inventory-Delete__closeicon {
-        margin-left: 637px;
-        margin-top: 21px;
-    }
-
-    .Inventory-Delete__block {
-        margin-left: 64px;
-        margin-right: 64px;
-        margin-bottom: 32px;
-    }
-
-    .Inventory-Delete__block--title {
+    .Warehouse-Edit__header--title {
         font-size: 32px;
-        font-weight: bold;
     }
 
-    .Inventory-Delete__block--description {
-        font-size: 16px;
-        font-weight: normal;
+    .Warehouse-Edit__formblock--title {
+        font-size: 24px;
     }
 
-    .Inventory-Delete__block--button {
+    // .Warehouse-Edit__form {
+    //     margin-left: 1.5rem;
+    //     margin-right: 1.5rem;
+    //     border: 0.0625rem solid black;
+    // }
+
+    .Warehouse-Edit__block {
         display: flex;
         flex-direction: row;
-        gap: 16px;
+        justify-content: center;
     }
 
-    .Inventory-Delete__block--button-cancel {
-        width: 72px;
-        height: 38px;
-        border-radius: 20px;
-        margin-left: 449px;
+    .Warehouse-Edit__formblock--warehouse-details {
+        border-bottom: none;
+        border-right: 0.0625rem solid black;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 24px;
+        margin-bottom: 8px;
     }
 
-    .Inventory-Delete__block--button-delete {
-        width: 72px;
-        height: 38px;
-        border-radius: 20px;
-        background-color: #C94515;
-        color: white;
+    .Warehouse-Edit__warehouse-details--title {
+        font-size: 14px;
+    }
+
+    .Warehouse-Edit__formblock--contact-details {
+        border-bottom: none;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    .Warehouse-Edit__buttonblock {
+        background-color: #F7F8F9B2;
+        border: 1px solid black;
+    }
+
+    .Warehouse-Edit__cancelbutton {
+        margin-left: 523px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .Warehouse-Edit__savebutton {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
 
 @media screen and (min-device-width: 1280px){
-    .Inventory-Delete__page {
-        position: absolute;
-        top: 185px;
-        left: 304px;
-        right: 304px;
-        background-color: #FFFFFF;
-        width: 670px;
-        height: 260px;
-        margin: 0px;
+    .Warehouse-Edit__page {
+        width: 1020px;
+        margin-left: 130px;
+        margin-right: 130px;
     }
+
+    .Warehouse-Edit__formblock--warehouse-details {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__warehouse-details--input {
+        width: 429px;
+    }
+
+    .Warehouse-Edit__formblock--contact-details {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 16px;
+    }
+
+    .Warehouse-Edit__contact-details--input {
+        width: 429px;
+    }
+
+    .Warehouse-Edit__cancelbutton {
+        margin-left: 830px;
+    }
+
 }

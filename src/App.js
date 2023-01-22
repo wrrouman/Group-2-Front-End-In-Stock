@@ -14,9 +14,16 @@ import Warehouse_Edit from "./components/Warehouse_Edit/Warehouse_Edit.js";
 import Inventory_Delete from "./components/Inventory_Delete/Inventory_Delete";
 import Inventory_Edit from "./components/Inventory_Edit/Inventory_Edit";
 
+
+
+//Will's Added components
+import Delete_Warehouse from "./components/Delete_Warehouse/Delete_Warehouse";
+import Add_Warehouse from "./components/Add_Warehouse/Add_Warhouse";
+import Inventory_Add from "./components/Inventory_Add/Inventory_Add";
+
 //import components
 import Header from "./components/Header/Header.js";
-import Add_Warehouse from "./components/Add_Warehouse/Add_Warhouse";
+// import Add_Warehouse from "./components/Add_Warehouse/Add_Warhouse";
 import Footer from "./components/footer/Footer";
 import Warehouse_List from "./components/Warehouse_List/Warehouse_List";
 import Warehouse_List_Sortbar from "./components/Warehouse_List_Sortbar/Warehouse_List_Sortbar";
@@ -90,6 +97,14 @@ function App() {
                         }
                     />
 
+                    {/* Will's Components */}
+                    <Route path ="/delete_warehouse/:warehouseID"
+                        element={<Delete_Warehouse/>}/>
+
+                   <Route path="add_warehouse" element={<Add_Warehouse/>}/>
+
+                   <Route path="add_inventoryitem" element={<Inventory_Add />}/>
+
                     {/* Howard's Component */}
                     <Route
                         path="/warehouse_details/:warehouseID"
@@ -111,6 +126,7 @@ function App() {
                         path="/inventories/:warehouseID/:inventoryID" 
                         element={<Inventory_Item_Details/>}
                     />
+                    
                     <Route
                         path="/edit_inventoryitems/:warehouseID/:inventoryID"
                         element={<Inventory_Edit />}
