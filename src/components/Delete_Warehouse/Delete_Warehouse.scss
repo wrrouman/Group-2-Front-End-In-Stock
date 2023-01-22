@@ -8,7 +8,8 @@
         width: 375px;
         height: 667px;
         position: absolute;
-        top: 0px;
+        top: -160px;
+        border-radius: 3px;
     }
 
     .Inventory-Delete__closeicon {
@@ -58,9 +59,9 @@
 @media screen and (min-device-width: 768px){
     .Inventory-Delete__page {
         position: absolute;
-        top: 185px;
-        left: 48px;
-        right: 48px;
+        top: 92px;
+        left: 21px;
+        right: 21px;
         background-color: #FFFFFF;
         width: 670px;
         height: 260px;
@@ -113,9 +114,9 @@
 @media screen and (min-device-width: 1280px){
     .Inventory-Delete__page {
         position: absolute;
-        top: 185px;
-        left: 304px;
-        right: 304px;
+        top: 92px;
+        left: 190px;
+        right: 190px;
         background-color: #FFFFFF;
         width: 670px;
         height: 260px;
