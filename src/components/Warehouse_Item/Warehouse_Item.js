@@ -57,8 +57,8 @@ function Warehouse_Item(props) {
                 </div>
                 <div>
                     <div className="warehouse-list__buttons-container">
-                        <img src={PencilIcon} alt="PencilIcon"></img>
-                        <img src={TrashIcon} alt="TrashIcon"></img>
+                        <img src={TrashIcon} alt="TrashIcon" className="warehouse-list__buttons--trash"></img>
+                        <img src={PencilIcon} alt="PencilIcon" className="warehouse-list__buttons--pencil"></img>
                     </div>
                 </div>
         </>

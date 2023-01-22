@@ -12,8 +12,8 @@ import Warehouse_Item from "../Warehouse_Item/Warehouse_Item";
 
 function Warehouse_List(props) {
     return (
-         <>
-        <section className="warehouse-list">
+        <>
+        {/* <section className="warehouse-list">
                 <div className="warehouse-list__details-container">
                     <aside className="warehouse-list__details-container--left">
                         <div className="warehouse-list__menu-quadrants">
@@ -55,7 +55,8 @@ function Warehouse_List(props) {
                     <img src={TrashIcon} alt="TrashIcon"></img>
                     <img src={PencilIcon} alt="PencilIcon"></img>
                 </div>
-            </section>
+            </section> */}
+            
             <section className="warehouse-list">{props.AllWarehousesInfo.map(warehouse => (
                 <Warehouse_Item SingleWarehouseInfo={warehouse}/>
             ))}
