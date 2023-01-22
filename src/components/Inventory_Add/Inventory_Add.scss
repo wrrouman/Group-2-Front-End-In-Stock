@@ -1,7 +1,12 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variable" as *;
+
 @media screen and (min-device-width: 0px){
 
-    textarea, select{ 
-        border-color: #BDC5D5;
+     textarea, select{ 
+    border: 1px solid $instock-cloud;  
     }
 
    
@@ -11,7 +16,7 @@
 
         margin-left: 1rem;
         margin-right: 1rem;
-        border: 0.0625rem solid black;
+        // border: 0.0625rem solid black;
     }
 
     .Inventory-Edit__header {
@@ -75,6 +80,7 @@
         padding-top: 8px;
         padding-bottom: 72px;
         margin-bottom: 16px;
+       
     }
 
     .Inventory-Edit__item-details--select {
@@ -85,6 +91,7 @@
         padding-top: 6px;
         padding-bottom: 6px;
         margin-bottom: 16px;
+        
     }
 
     .Inventory-Edit__block--item-availability {
@@ -108,6 +115,8 @@
         flex-direction: row;
         gap: 1.875rem;
         padding-bottom: 18px;
+        justify-content:flex-start;
+        align-content: center;
     }
 
     .Inventory-Edit__block--status-block {
@@ -126,6 +135,8 @@
 
     .Inventory-Edit__block--status-label {
         font-size: 13px;
+        
+
     }
 
     .Inventory-Edit__item-availability--select {
@@ -136,6 +147,7 @@
         padding-top: 6px;
         padding-bottom: 6px;
         margin-bottom: 16px;
+      
     }
 
     .Inventory-Edit__block--editbutton {
@@ -147,7 +159,7 @@
         flex-direction: row;
         gap: 17px;
         padding-bottom: 0.625rem;
-        border-bottom: 0.0625rem solid black;
+        // border-bottom: 0.0625rem solid black;
     }
 
     .Inventory-Edit__editbutton--cancel {
@@ -161,7 +173,8 @@
         font-size: 13px;
         border-radius: 20px;
         color: white;
-        background-color: #2E66E5;
+        background: $instock-blue;
+        
     }
 }
 
@@ -197,6 +210,7 @@
         padding-right: 32px;
         margin-top: 24px;
         margin-bottom: 8px;
+        width: 50%
     }
 
     .Inventory-Edit__item-details--title {
@@ -211,6 +225,7 @@
         padding-right: 32px;
         margin-top: 24px;
         margin-bottom: 8px;
+       
     }
 
     .Inventory-Edit__item-availability--title {
@@ -218,8 +233,7 @@
     }
 
     .Inventory-Edit__block--editbutton {
-        background-color: #F7F8F9B2;
-        border: 1px solid black;
+        justify-content: end;
     }
 
     .Inventory-Edit__editbutton--cancel {
@@ -232,6 +246,7 @@
         padding: 8px 16px;
         font-size: 14px;
     }
+
     
 }
 

@@ -5,162 +5,125 @@
 
 
 @media screen and (min-device-width: 0px){
-    input, textarea, select, button {
-        border: 1px solid black;
-        border-radius: 20px;
-    }
-
-
-    label{
-        font-size: 13px;
-        font-weight: 700;
-        color: $instock-black;
-        line-break: 20px;
-       padding-top: 1.5rem;
-    }
-    .button_white{
-        height: 36px;
-        width: 140px;
-        border: 1px solid $instock-cloud;
-        background-color: $instock-white;
-        color: $instock-slate;
-        
-
-    }
-
-    .button_color{
-        height: 36px;
-        width: 140px;
-        border: none;
-        background-color: $instock-blue;
-        color: $instock-white;
-
-    }
-
-    input {
-        box-sizing: border-box;
-        background-color: $instock-white;
-        border: 1px solid $instock-cloud;
-        border-radius: 20px;
-        font-family: 'Titillium Web';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 20px;
-        color: aqua;
-        padding-left:1rem;
-        height: 36px;
-
-    }
-
-   .warehouse_blueButton{
-        background-color: $instock-blue;
-   }
-
-    .warehouse_add_popup {
+    .Inventory-Delete__page {
+        margin-left: -17px;
+        margin-right: -17px;
+        border: 0.0625rem solid black;
+        background-color: #FFFFFF;
+        width: 375px;
+        height: 667px;
         position: absolute;
-        left: 4.27%;
-        right: 4.27%;
-        top: 11.79%;
-        bottom: 8.32%;
-        background: $instock-white;
-        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-        border-radius: 3px;
+        top: 0px;
     }
 
-    .warehouse_details{
-
-        font-family: 'Titillium Web';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 28px;
-        color: $instock-black;
-
+    .Inventory-Delete__closeicon {
+        margin-left: 340px;
+        margin-top: 21px;
     }
 
-    .warehouse_add_header {
-        display: flex;
-        flex-direction: row;
-        border-bottom: 1px solid black;
-        display: flex;
-        justify-content: center ;
-        font-family: 'Titillium Web';
-        font-style: normal;
-        font-weight: 600;
+    .Inventory-Delete__block {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 381px;
+    }
+
+    .Inventory-Delete__block--title {
         font-size: 28px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        color: $instock-black;
+        font-weight: bold;
+        margin-bottom: 16px;
     }
 
-    .warehouse_add_block1 {
-        padding-left: 24px;
-        padding-right: 24px;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
-
-        
+    .Inventory-Delete__block--description {
+        font-size: 15px;
+        font-weight: normal;
     }
 
-    .warehouse_add_block2 {
-        padding-left: 24px;
-        padding-right: 24px;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10px;
-    }
-
-    .warehouse_addbutton_block {
-        padding-left: 24px;
-        padding-right: 24px;
+    .Inventory-Delete__block--button {
         display: flex;
         flex-direction: row;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
-        display: flex;
-        justify-content: space-between;
+        gap: 17px;
+    }
+
+    .Inventory-Delete__block--button-cancel {
+        width: 163px;
+        height: 36px;
+        border-radius: 20px;
+        margin-left: 16px;
+    }
+
+    .Inventory-Delete__block--button-delete {
+        width: 163px;
+        height: 36px;
+        border-radius: 20px;
+        background-color: #C94515;
+        color: white;
     }
 }
 
 @media screen and (min-device-width: 768px){
-    .warehouse_add_popup {
-        // move later
-        margin-top: 30px;
-
-        margin-left: 0px;
-        margin-right: 0px;
-        border: none;
-    }
-    
-    .warehouse_add_header {
-        margin-left: 24px;
-        margin-right: 24px;
-        border-bottom: 1px solid black;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
+    .Inventory-Delete__page {
+        position: absolute;
+        top: 185px;
+        left: 48px;
+        right: 48px;
+        background-color: #FFFFFF;
+        width: 670px;
+        height: 260px;
+        margin: 0px;
     }
 
-    .warehouse_add_form {
-        border: 1px solid black;
+    .Inventory-Delete__closeicon {
+        margin-left: 637px;
+        margin-top: 21px;
     }
 
-    .warehouse_add_block {
+    .Inventory-Delete__block {
+        margin-left: 64px;
+        margin-right: 64px;
+        margin-bottom: 32px;
+    }
+
+    .Inventory-Delete__block--title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .Inventory-Delete__block--description {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .Inventory-Delete__block--button {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-
+        gap: 16px;
     }
 
-    .warehouse_add_block1 {
-        border-bottom: none;
-        border-right: 1px solid black;
+    .Inventory-Delete__block--button-cancel {
+        width: 72px;
+        height: 38px;
+        border-radius: 20px;
+        margin-left: 449px;
+    }
+
+    .Inventory-Delete__block--button-delete {
+        width: 72px;
+        height: 38px;
+        border-radius: 20px;
+        background-color: #C94515;
+        color: white;
     }
 }
 
 @media screen and (min-device-width: 1280px){
+    .Inventory-Delete__page {
+        position: absolute;
+        top: 185px;
+        left: 304px;
+        right: 304px;
+        background-color: #FFFFFF;
+        width: 670px;
+        height: 260px;
+        margin: 0px;
+    }
 }

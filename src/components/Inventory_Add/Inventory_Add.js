@@ -1,10 +1,59 @@
 import "./Inventory_Add.scss";
+import axios from "axios";
+import { useState, useEffect } from 'react';
 import { NavLink, useParams } from "react-router-dom";
+import { v9 } from "uuid";
 
 //import images
 import Arrow_back from "../../assets/Icons/arrow_back-24px.svg";
 
 function Inventory_Add() {
+
+  let { warehouseID, inventoryID } = useParams();
+  const [ClickInventorySave, setClickInventorySave] = useState(false);
+  const [AddInventoryInfo, setAddInventoryInfo] = useState({
+      id: inventoryID,
+      warehouseID: warehouseID,
+      warehouseName: null,
+      itemName: null,
+      description: null,
+      category: null,
+      status: null,
+      quantity: null
+  });
+
+  //
+  useEffect(() => {
+      if (ClickInventorySave === true) {
+          axios.post(`http://localhost:8080/inventory/`, AddInventoryInfo)
+          .then(res => {
+              console.log(res);
+              setClickInventorySave(false);
+          })
+          .catch(err => console.log(err));
+      }
+  
+  }, [ClickInventorySave])
+
+  const InventoryAddClickedonSave = (event) => {
+      event.preventDefault();
+      let form = document.getElementById("Inventory-Add__form")
+
+      let add_inventoryname = document.getElementById("Inventory-Add__input--inventoryname").value;
+      let add_inventorydescription = document.getElementById("Inventory-Add__input--inventorydescription").value;
+      let add_inventorycategory = document.getElementById("Inventory-Add__input--inventorycategory").value;
+      // let edit_inventorystatus = document.getElementById("Warehouse-Edit__input--warehousecountry").value;
+      let add_inventorywarehouse = document.getElementById("Inventory-Add__input--inventorywarehouse").value;
+
+      let addedinventoryobj = {...AddInventoryInfo, warehouseName:add_inventorywarehouse, itemName:add_inventoryname, description:add_inventorydescription, category:add_inventorycategory};
+      console.log(addedinventoryobj);
+      console.log(event);
+      setAddInventoryInfo(addedinventoryobj);
+      setClickInventorySave(true);
+      form.reset();
+  }
+
+
   return (
     <>
       <div className="Inventory-Edit__page">
@@ -22,7 +71,7 @@ function Inventory_Add() {
           </p>
         </div>
 
-        <form className="Inventory-Edit__form">
+        <form className="Inventory-Edit__form" id="Inventory-Add__form">
           <div className="Inventory-Edit__block">
             <div className="Inventory-Edit__block--item-details">
               <p className="Inventory-Edit__formblock--title">Item Details</p>
@@ -33,6 +82,7 @@ function Inventory_Add() {
               <input
                 placeholder="Item Name"
                 className="Inventory-Edit__item-details--input"
+                id="Inventory-Add__input--inventoryname"
               />
 
               <label className="Inventory-Edit__item-details--title">
@@ -41,13 +91,14 @@ function Inventory_Add() {
               <textarea
                 placeholder="Please enter a breif description..."
                 className="Inventory-Edit__item-details--textarea"
+                id="Inventory-Add__input--inventorydescription"
               />
 
               <label className="Inventory-Edit__item-details--title">
                 Category
               </label>
-              <select className="Inventory-Edit__item-details--select">
-                <option value="electronics" selected>
+              <select className="Inventory-Edit__item-details--select" id="Inventory-Add__input--inventorycategory">
+                <option value="electronics">
                   Please Select
                 </option>
                 <option value="gear">Gear</option>
@@ -76,7 +127,7 @@ function Inventory_Add() {
                     className="Inventory-Edit__block--status-input"
                   ></input>
                   <label
-                    for="instock"
+                    htmlFor="instock"
                     className="Inventory-Edit__block--status-label"
                   >
                     In stock
@@ -92,7 +143,7 @@ function Inventory_Add() {
                     className="Inventory-Edit__block--status-input"
                   ></input>
                   <label
-                    for="outofstock"
+                    htmlFor="outofstock"
                     className="Inventory-Edit__block--status-label"
                   >
                     Out of stock
@@ -110,8 +161,8 @@ function Inventory_Add() {
               <label className="Inventory-Edit__item-availability--title">
                 Warehouse
               </label>
-              <select className="Inventory-Edit__item-availability--select">
-                <option value="manhattan" selected>
+              <select className="Inventory-Edit__item-availability--select" id="Inventory-Add__input--inventorywarehouse">
+                <option value="manhattan">
                   Please Select
                 </option>
                 <option value="Washington">Washington</option>
@@ -129,10 +180,10 @@ function Inventory_Add() {
             <button className="Inventory-Edit__editbutton--cancel">
               Cancel
             </button>
-            <button className="Inventory-Edit__editbutton--save">Save</button>
+            <button className="Inventory-Edit__editbutton--save" onClick={InventoryAddClickedonSave}>+ Add Item</button>
           </div>
         </form>
-        <footer>footer is here</footer>
+       
       </div>
     </>
   );

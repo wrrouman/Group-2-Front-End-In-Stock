@@ -14,7 +14,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="Add" element={<Add_Warehouse />} />
+          <Route path="add_warehouse" element={<Add_Warehouse />} />
           <Route
             path="delete_Warehouse/:warehouseID"
             element={<Delete_Warehouse />}

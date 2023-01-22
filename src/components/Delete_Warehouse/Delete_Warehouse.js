@@ -1,50 +1,74 @@
 import "./Delete_Warehouse.scss";
-import { useState, useEffect } from "react";
-import { NavLink, Link, useParams } from "react-router-dom";
+import axios from 'axios';
+import { useState, useEffect} from 'react';
+import { NavLink, useParams } from 'react-router-dom';
 
 //import images
 import Close from "../../assets/Icons/close-24px.svg";
 
 //import JSON files
-import Inventory_Json from "../../assets/JSON Data/inventories.json";
-import Warehouse_Json from "../../assets/JSON Data/warehouses.json";
+import Inventory_Json from "../../server/data/inventories.json";
+import Warehouse_Json from "../../server/data/warehouses.json";
 
-function Delete_Warehouse() {
-  let { warehouseID } = useParams();
+function Delete_Warehouse(props) {
+    let { warehouseID } = useParams();
+    const [ClickedDelete, setClickedDelete] = useState(false);
 
-  //useState variable
-  const [WarehousesJson, setWarehousesJson] = useState(Warehouse_Json);
-  const [CurrentWarehouseJson, setCurrentWarehouseJson] = useState([]);
+    //useState variable
+    const [WarehouseJson, setWarehouseJson] = useState(Warehouse_Json);
+    const [CurrentWarehouseJson, setCurrentWarehouseJson] = useState([]);
 
-  useEffect(() => {
-    let current_warehouse = WarehousesJson.filter((x) => x.id === warehouseID);
-    setCurrentWarehouseJson(current_warehouse);
-  }, [warehouseID]);
+    useEffect(() => {
+        let current_warehouse = WarehouseJson.filter(x => x.id === warehouseID);
+        setCurrentWarehouseJson(current_warehouse);
+    }, [warehouseID]);
 
-  console.log(CurrentWarehouseJson[0]?.name);
+    console.log(CurrentWarehouseJson[0]?.warehouseName);
 
-  return (
-    <>
-      <div className="Delete_Warehouse__page">
-        <NavLink className="delete_x" to={`/`}>
-          <img src={Close} />
-        </NavLink>
+    // Delete an Inventory
+    useEffect(() => {
+        if (ClickedDelete === true) {
+            axios.delete(`http://localhost:8080/warehouses/2922c286-16cd-4d43-ab98-c79f698aeab0`)
+            .then(res => {
+                console.log(props.CurrentwarehouseId);
+                console.log(res.status);
+                setClickedDelete(false);
+            })
+            // .catch(err => console.log(err));
+            
+        }
+    }, [ClickedDelete])
 
-        <p className="delete_warehouse-header">
-          Delete {CurrentWarehouseJson[0]?.name} warehouse?
-        </p>
-        <p className="delete_warehouse-confirmation">
-          Please confirm that you'd like to delete Television from the inventory
-          list. You won't be able to undo this action
-        </p>
-        <div className="delete_warehouse--buttons">
-          <button className="delete_warehouse--cancelButton">Cancel</button>
+    const ClickDeleteButton = (event) => {
+        event.preventDefault();
+        console.log(event);
+        setClickedDelete(true);
+        props.CloseDeletePopup();
+    }
 
-          <button className="delete_warehouse--deleteButton">Delete</button>
-        </div>
-      </div>
-    </>
-  );
+    console.log(props.CurrentwarehouseId);
+
+
+    return(
+        <>
+            <div className="Inventory-Delete__page">
+                <img src={Close} className="Inventory-Delete__closeicon" onClick={props.CloseDeletePopup}/>
+
+                <div className="Inventory-Delete__block">
+                    <p className="Inventory-Delete__block--title">Delete  Warehouse?</p>
+                    <p className="Inventory-Delete__block--description">Please confirm that you'd like to delete from the inventory list.</p>
+                    <p className="Inventory-Delete__block--description">You won't be able to undo this action</p>
+                </div>
+
+                <div className="Inventory-Delete__block--button">
+                        <button className="Inventory-Delete__block--button-cancel" onClick={props.CloseDeletePopup}>Cancel</button>
+                        <button className="Inventory-Delete__block--button-delete" onClick={props.ClickDeleteButton}>Delete</button>
+                </div>
+
+            </div>
+
+        </>
+    );
 }
 
-export default Delete_Warehouse;
+export default Delete_Warehouse
