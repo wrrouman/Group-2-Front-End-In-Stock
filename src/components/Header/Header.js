@@ -30,9 +30,11 @@ function Header({ getURL }) {
 
                     </div>
                     <div className="header__nav-buttons-container">
-                        <button className="header__nav-buttons--warehouse ">
-                            Warehouse
-                        </button>
+                        <NavLink to={"/"}>
+                            <button className="header__nav-buttons--warehouse ">
+                                Warehouse
+                            </button>
+                        </NavLink>
                         <button className="header__nav-buttons--inventory">
                             Inventory
                         </button>
