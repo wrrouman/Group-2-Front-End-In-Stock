@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
+//import images
 import TrashIcon from "../../assets/Icons/delete_outline-24px.svg";
 import PencilIcon from "../../assets/Icons/edit-24px.svg";
 import LessThanIcon from "../../assets/Icons/chevron_right-24px.svg";
