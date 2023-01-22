@@ -1,6 +1,8 @@
 import "./App.scss";
 import "./styles/partials/_global.scss";
+import axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 //import JSON files
 import Inventory_json from "./server/data/inventories.json";
@@ -22,26 +24,82 @@ import Inventory_Item_Details from "./components/Inventory_Item_Details/Inventor
 import Inventory_List_Add_New_Inventory from "./components/Inventory_List_Add_New_Inventory/Inventory_List_Add_New_Inventory";
 
 function App() {
+    const [RequiredVideoLoading, setRequiredVideoLoading] = useState(true);
+
+    // useState - All Warehouses Info
+    const [AllWarehousesInfo, setAllWarehousesInfo] = useState([]);
+
+    // useState - All Inventory Info
+    const [AllInventoriesInfo, setAllInventoriesInfo] = useState([]);
+
+    // useState - currentWarehouse
+    const [CurrentWarehouseId, setCurrentWarehouseId] = useState("000");
+
+    // useEffect - GetAllWarehousesInfo
+    useEffect(() => {
+        function GetAllWarehousesInfo() {
+            return axios
+                .get(`http://localhost:8080/warehouses`)
+                .then((element) => {
+                    let warehouses_info = element.data;
+                    setAllWarehousesInfo(warehouses_info);
+                    setRequiredVideoLoading(false);
+                });
+        }
+        if (RequiredVideoLoading === true) {
+            GetAllWarehousesInfo();
+        }
+    }, [AllWarehousesInfo]);
+
+    // useEffect - GetAllInventoriesInfo
+    useEffect(() => {
+        function GetAllInventoriesInfo() {
+            return axios
+                .get(`http://localhost:8080/inventories`)
+                .then((element) => {
+                    let inventories_info = element.data;
+                    setAllInventoriesInfo(inventories_info);
+                    setRequiredVideoLoading(false);
+                });
+        }
+        if (RequiredVideoLoading === true) {
+            GetAllInventoriesInfo();
+        }
+    }, [AllInventoriesInfo]);
+
+    function UpdateCurrentWarehouseId(UpdateWarehouseId) {
+        setCurrentWarehouseId(UpdateWarehouseId);
+        console.log(CurrentWarehouseId);
+    }
+
     return (
         <>
-            <Header />
-            <Inventory_Item_Details />
-            <Warehouse_List_Sortbar />
-            <Warehouse_List />
-            <Inventory_List_Add_New_Inventory />
-
             <BrowserRouter>
+                <Header />
                 <Routes>
                     {/* return here to correct paths */}
-                    <Route path="placeholder1" element={<Header />} />
-                    <Route path="Add" git element={<Add_Warehouse />} />
+                    {/* <Route path="placeholder1" element={<Header />} />
+                    <Route path="Add" element={<Add_Warehouse />} /> */}
+
+                    <Route
+                        path="/"
+                        element={
+                            <Warehouse_List
+                                AllWarehousesInfo={AllWarehousesInfo}
+                            />
+                        }
+                    />
 
                     {/* Howard's Component */}
                     <Route
                         path="/warehouse_details/:warehouseID"
                         element={
                             <Warehouse_Details
-                                Warehouse_json={Warehouse_json}
+                                AllInventoriesInfo={AllInventoriesInfo}
+                                AllWarehousesInfo={AllWarehousesInfo}
+                                UpdateCurrentWarehouseId={
+                                    UpdateCurrentWarehouseId
+                                }
                             />
                         }
                     />
@@ -50,7 +108,7 @@ function App() {
                         element={<Warehouse_Edit />}
                     />
                     <Route
-                        path="/edit_inventoryitems/:inventoryID"
+                        path="/edit_inventoryitems/:warehouseID/:inventoryID"
                         element={<Inventory_Edit />}
                     />
                     {/* End of Howard's Component */}

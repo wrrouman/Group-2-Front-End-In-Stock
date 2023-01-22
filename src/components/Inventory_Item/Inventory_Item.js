@@ -1,6 +1,7 @@
-import "./Inventory_Item.scss";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import './Inventory_Item.scss';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 //import images
 import Chevron_Right from "../../assets/Icons/chevron_right-24px.svg";
@@ -20,7 +21,29 @@ function Inventory_Item(props) {
         setShowDeletePopup(false);
     };
 
-    return (
+    const [ClickedDelete, setClickedDelete] = useState(false);
+    // Delete an Inventory
+    useEffect(() => {
+        if (ClickedDelete === true) {
+            axios.delete(`http://localhost:8080/inventories/${props.Inventory_ItemInfo.id}`)
+            .then(res => {
+                console.log(props.Inventory_ItemInfo.id);
+                console.log(res.status);
+                setClickedDelete(false);
+            })
+            // .catch(err => console.log(err));
+            
+        }
+    }, [ClickedDelete])
+
+    const ClickDeleteButton = (event) => {
+        event.preventDefault();
+        setClickedDelete(true);
+        props.setInventoryListUpdate(true);
+        CloseDeletePopup();
+    }
+
+    return(
         <>
             <div className="Inventory-Item__page">
                 <div className="Inventory-Item__allinfo">
@@ -52,12 +75,9 @@ function Inventory_Item(props) {
 
                     <div className="Inventory-Item__allinfo--info">
                         <div className="Inventory-Item__allinfo--infoblock Inventory-Item__tablettitle--status">
-                            <p className="Inventory-Item__allinfo--mobiletitle">
-                                STATUS
-                            </p>
-                            <p className="Inventory-Item__allinfo--info">
-                                {props.Inventory_ItemInfo.status}
-                            </p>
+                            <p className="Inventory-Item__allinfo--mobiletitle">STATUS</p>
+                            <p className={props.Inventory_ItemInfo.status === "Out of Stock" ?`Inventory-Item__allinfo--info OutofStock` : `Inventory-Item__allinfo--info InStock`} id="Inventory-Item__allinfo--status">{props.Inventory_ItemInfo.status}</p>
+                            
                         </div>
 
                         <div className="Inventory-Item__allinfo--infoblock Inventory-Item__tablettitle--qty">
@@ -79,24 +99,13 @@ function Inventory_Item(props) {
                             onClick={OpenDeletePopup}
                         />
 
-                        <NavLink
-                            to={`/edit_inventoryitems/${props.Inventory_ItemInfo.id}`}
-                        >
-                            <img
-                                src={Edit}
-                                className="Inventory-Item__action--editicon"
-                            />
+
+                        <NavLink to={`/edit_inventoryitems/${props.Inventory_ItemInfo.warehouseID}/${props.Inventory_ItemInfo.id}`}>
+                            <img src={Edit} className="Inventory-Item__action--editicon"/>
                         </NavLink>
                     </div>
                 </div>
-                <div>
-                    {ShowDeletePopup ? (
-                        <Inventory_Delete
-                            Inventory_ItemInfo={props.Inventory_ItemInfo}
-                            CloseDeletePopup={CloseDeletePopup}
-                        />
-                    ) : null}
-                </div>
+                <div>{ ShowDeletePopup ? <Inventory_Delete ClickDeleteButton={ClickDeleteButton} Inventory_ItemInfo={props.Inventory_ItemInfo} CloseDeletePopup={CloseDeletePopup} CurrentInventoryId={props.Inventory_ItemInfo.id} /> : null }</div>
             </div>
         </>
     );
