@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 //import images
 import TrashIcon from "../../assets/Icons/delete_outline-24px.svg";
 import PencilIcon from "../../assets/Icons/edit-24px.svg";
@@ -30,7 +29,10 @@ function Inventory_Item_Details({ getURL }) {
                     <aside className="inventory-item-details__details-container--left">
                         <div>
                             <h2>INVENTORY DESCRIPTION:</h2>
-                            <p>Placeholder Item DESC Placeholder Item DESC Placeholder Item DESC Placeholder Item DESC</p>
+                            <p>
+                                Placeholder Item DESC Placeholder Item DESC
+                                Placeholder Item DESC Placeholder Item DESC
+                            </p>
                         </div>
                         <div>
                             <h2>CATEGORY</h2>
