@@ -5,7 +5,7 @@
 
 
 @media screen and (min-device-width: 0px){
-    input, textarea, select, button {
+    input, textarea, select {
         border: 0.0625rem solid $instock-cloud;
         border-radius: 20px;
         height: 36px;
@@ -15,6 +15,12 @@
     label{
         padding-top: 1rem;
     }
+    button {
+        border: 0.0625rem solid $instock-cloud;
+        border-radius: 20px;
+        height: 36px;
+    }
+
     
 
     .warehouse_add_popup {
