@@ -132,6 +132,16 @@ function App() {
                         element={<Inventory_Edit />}
                     />
                     {/* End of Howard's Component */}
+
+                    <Route 
+                        path="Inventory_List_Add_New_Inventory"
+                        element={<Inventory_List_Add_New_Inventory />}
+                    />
+
+                    <Route
+                        path="Inventory_Item_Details/:/inventory/:inventoryid"
+                        element={<Inventory_Item_Details />}
+                    />
                 </Routes>
                 <Footer />
             </BrowserRouter>

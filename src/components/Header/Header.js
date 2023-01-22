@@ -35,9 +35,11 @@ function Header({ getURL }) {
                                 Warehouse
                             </button>
                         </NavLink>
-                        <button className="header__nav-buttons--inventory">
-                            Inventory
-                        </button>
+                        <Link to={"Inventory"}>
+                            <button className="header__nav-buttons--inventory">
+                                Inventory
+                            </button>
+                        </Link>
                     </div>
                 </nav>
                 {/* <section className="header__sub-menu">
