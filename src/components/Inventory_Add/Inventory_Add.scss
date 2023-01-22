@@ -17,6 +17,8 @@
         margin-left: 1rem;
         margin-right: 1rem;
         // border: 0.0625rem solid black;
+        position: relative;
+        bottom: 123px;
     }
 
     .Inventory-Edit__header {
@@ -170,7 +172,7 @@
     }
 
     .Inventory-Edit__editbutton--save {
-        padding: 8px 30px;
+        padding: 8px 51px;
         font-size: 13px;
         border-radius: 20px;
         color: white;
