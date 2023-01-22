@@ -15,38 +15,38 @@ function Delete_Warehouse(props) {
     const [ClickedDelete, setClickedDelete] = useState(false);
 
     //useState variable
-    const [WarehouseJson, setWarehouseJson] = useState(Warehouse_Json);
-    const [CurrentWarehouseJson, setCurrentWarehouseJson] = useState([]);
+    // const [WarehouseJson, setWarehouseJson] = useState(Warehouse_Json);
+    // const [CurrentWarehouseJson, setCurrentWarehouseJson] = useState([]);
 
-    useEffect(() => {
-        let current_warehouse = WarehouseJson.filter(x => x.id === warehouseID);
-        setCurrentWarehouseJson(current_warehouse);
-    }, [warehouseID]);
+    // useEffect(() => {
+    //     let current_warehouse = WarehouseJson.filter(x => x.id === warehouseID);
+    //     setCurrentWarehouseJson(current_warehouse);
+    // }, [warehouseID]);
 
-    console.log(CurrentWarehouseJson[0]?.warehouseName);
+    // console.log(CurrentWarehouseJson[0]?.warehouseName);
 
     // Delete an Inventory
-    useEffect(() => {
-        if (ClickedDelete === true) {
-            axios.delete(`http://localhost:8080/warehouses/2922c286-16cd-4d43-ab98-c79f698aeab0`)
-            .then(res => {
-                console.log(props.CurrentwarehouseId);
-                console.log(res.status);
-                setClickedDelete(false);
-            })
+    // useEffect(() => {
+    //     if (ClickedDelete === true) {
+    //         axios.delete(`http://localhost:8080/warehouses/2922c286-16cd-4d43-ab98-c79f698aeab0`)
+    //         .then(res => {
+    //             console.log(props.CurrentwarehouseId);
+    //             console.log(res.status);
+    //             setClickedDelete(false);
+    //         })
             // .catch(err => console.log(err));
             
-        }
-    }, [ClickedDelete])
+    //     }
+    // }, [ClickedDelete])
 
-    const ClickDeleteButton = (event) => {
-        event.preventDefault();
-        console.log(event);
-        setClickedDelete(true);
-        props.CloseDeletePopup();
-    }
+    // const ClickDeleteButton = (event) => {
+    //     event.preventDefault();
+    //     console.log(event);
+    //     setClickedDelete(true);
+    //     props.CloseDeletePopup();
+    // }
 
-    console.log(props.CurrentwarehouseId);
+    // console.log(props.CurrentwarehouseId);
 
 
     return(

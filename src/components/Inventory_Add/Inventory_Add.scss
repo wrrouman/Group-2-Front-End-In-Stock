@@ -5,7 +5,7 @@
 
 @media screen and (min-device-width: 0px){
 
-     textarea, select{ 
+     textarea, select, input{ 
     border: 1px solid $instock-cloud;  
     }
 
@@ -159,6 +159,7 @@
         flex-direction: row;
         gap: 17px;
         padding-bottom: 0.625rem;
+        min-width:3rem
         // border-bottom: 0.0625rem solid black;
     }
 
@@ -169,7 +170,7 @@
     }
 
     .Inventory-Edit__editbutton--save {
-        padding: 8px 51px;
+        padding: 8px 30px;
         font-size: 13px;
         border-radius: 20px;
         color: white;
@@ -237,7 +238,7 @@
     }
 
     .Inventory-Edit__editbutton--cancel {
-        margin-left: 523px;
+       
         padding: 8px 16px;
         font-size: 14px;
     }
@@ -245,6 +246,7 @@
     .Inventory-Edit__editbutton--save {
         padding: 8px 16px;
         font-size: 14px;
+        
     }
 
     
@@ -279,7 +281,4 @@
         width: 429px;
     } 
 
-    .Inventory-Edit__editbutton--cancel {
-        margin-left: 830px;
-    }
 }

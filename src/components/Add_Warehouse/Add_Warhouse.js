@@ -1,4 +1,4 @@
-import "./Add_Warehouse.scss";
+import "./Add_Warehouse.scss"
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
