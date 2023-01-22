@@ -40,10 +40,10 @@ function Inventory_Edit(props) {
         let edit_inventoryname = document.getElementById("Inventory-Edit__input--inventoryname").value;
         let edit_inventorydescription = document.getElementById("Inventory-Edit__input--inventorydescription").value;
         let edit_inventorycategory = document.getElementById("Inventory-Edit__input--inventorycategory").value;
-        // let edit_inventorystatus = document.getElementById("Warehouse-Edit__input--warehousecountry").value;
+        let edit_inventorystatus = document.querySelector(`input[name='stockstatus']:checked`).value;
         let edit_inventorywarehouse = document.getElementById("Inventory-Edit__input--inventorywarehouse").value;
 
-        let editedinventoryobj = {...EditInventoryInfo, warehouseName:edit_inventorywarehouse, itemName:edit_inventoryname, description:edit_inventorydescription, category:edit_inventorycategory};
+        let editedinventoryobj = {...EditInventoryInfo, warehouseName:edit_inventorywarehouse, itemName:edit_inventoryname, description:edit_inventorydescription, category:edit_inventorycategory, status:edit_inventorystatus};
         console.log(editedinventoryobj);
         console.log(event);
         setEditInventoryInfo(editedinventoryobj);
