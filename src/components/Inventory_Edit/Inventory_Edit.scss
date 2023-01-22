@@ -1,4 +1,12 @@
 @media screen and (min-device-width: 0px){
+    .OutofStock_DontShow {
+        display: none;
+    }
+
+    .InStock_Show {
+        display: flex;
+    }
+
     .Inventory-Edit__page {
         // move later
         margin-top: 1.875rem;

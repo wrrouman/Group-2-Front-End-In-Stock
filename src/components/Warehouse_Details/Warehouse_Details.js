@@ -6,10 +6,6 @@ import { NavLink, useParams } from 'react-router-dom';
 import Arrow_back from '../../assets/Icons/arrow_back-24px.svg';
 import Edit from '../../assets/Icons/edit-24px.svg';
 
-//import json files
-import Inventory_json from "../../server/data/inventories.json";
-import Warehouse_json from "../../server/data/warehouses.json";
-
 //import components
 import Inventory_List from '../Inventory_List/Inventory_List.js';
 

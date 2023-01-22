@@ -1,4 +1,18 @@
 @media screen and (min-device-width: 0px){
+    .Inventory-Item__allinfo--info.OutofStock {
+        background-color: #C9451512;
+        color: #C94515;
+        border-radius: 20px;
+        padding: 2px;
+    }
+
+    .Inventory-Item__allinfo--info.InStock {
+        background-color: #15846312;
+        color: #158463;
+        border-radius: 20px;
+        padding: 2px;
+    }
+
     .Inventory-Item__page {
         display: flex;
         flex-direction: column;

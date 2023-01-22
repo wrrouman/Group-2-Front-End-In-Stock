@@ -62,7 +62,7 @@ function Inventory_Item(props) {
                     <div className="Inventory-Item__allinfo--info">
                         <div className="Inventory-Item__allinfo--infoblock Inventory-Item__tablettitle--status">
                             <p className="Inventory-Item__allinfo--mobiletitle">STATUS</p>
-                            <p className="Inventory-Item__allinfo--info">{props.Inventory_ItemInfo.status}</p>
+                            <p className={props.Inventory_ItemInfo.status === "Out of Stock" ?`Inventory-Item__allinfo--info OutofStock` : `Inventory-Item__allinfo--info InStock`} id="Inventory-Item__allinfo--status">{props.Inventory_ItemInfo.status}</p>
                             
                         </div>
 

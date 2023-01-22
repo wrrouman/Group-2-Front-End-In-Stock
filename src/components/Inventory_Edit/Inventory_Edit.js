@@ -17,7 +17,7 @@ function Inventory_Edit(props) {
         description: null,
         category: null,
         status: null,
-        quantity: null
+        quantity: 0
     });
 
     //
@@ -41,14 +41,38 @@ function Inventory_Edit(props) {
         let edit_inventorydescription = document.getElementById("Inventory-Edit__input--inventorydescription").value;
         let edit_inventorycategory = document.getElementById("Inventory-Edit__input--inventorycategory").value;
         let edit_inventorystatus = document.querySelector(`input[name='stockstatus']:checked`).value;
+        let edit_inventoryquantity = 0;
+        if (document.getElementById("Inventory-Edit__input--inventorycategory").value) {
+            edit_inventoryquantity = document.getElementById("Inventory-Edit__input--inventorycategory").value;
+        }
         let edit_inventorywarehouse = document.getElementById("Inventory-Edit__input--inventorywarehouse").value;
 
-        let editedinventoryobj = {...EditInventoryInfo, warehouseName:edit_inventorywarehouse, itemName:edit_inventoryname, description:edit_inventorydescription, category:edit_inventorycategory, status:edit_inventorystatus};
+        let editedinventoryobj = {...EditInventoryInfo, warehouseName:edit_inventorywarehouse, itemName:edit_inventoryname, description:edit_inventorydescription, category:edit_inventorycategory, status:edit_inventorystatus, quantity: edit_inventoryquantity};
         console.log(editedinventoryobj);
         console.log(event);
         setEditInventoryInfo(editedinventoryobj);
         setClickInventorySave(true);
         form.reset();
+    }
+
+    function AddQuantityInput() {
+        let itemquantity_title = document.getElementById("Inventory-Edit__title--inventoryquantity");
+        let itemquantity_input = document.getElementById("Inventory-Edit__input--inventoryquantity");
+
+        itemquantity_title.classList.remove("OutofStock_DontShow");
+        itemquantity_input.classList.remove("OutofStock_DontShow");
+        itemquantity_title.classList.add("InStock_Show");
+        itemquantity_input.classList.add("InStock_Show");
+    }
+
+    function HideQuantityInput() {
+        let itemquantity_title = document.getElementById("Inventory-Edit__title--inventoryquantity");
+        let itemquantity_input = document.getElementById("Inventory-Edit__input--inventoryquantity");
+
+        itemquantity_title.classList.add("OutofStock_DontShow");
+        itemquantity_input.classList.add("OutofStock_DontShow");
+        itemquantity_title.classList.remove("InStock_Show");
+        itemquantity_input.classList.remove("InStock_Show");
     }
 
     return(
@@ -91,15 +115,17 @@ function Inventory_Edit(props) {
                             <label className="Inventory-Edit__item-availability--title">Status</label>
                             <div className="Inventory-Edit__block--status">
                                 <div className="Inventory-Edit__block--status-block">
-                                    <input type="radio" id="instock" name="stockstatus" value="In stock" className="Inventory-Edit__block--status-input"></input>
+                                    <input type="radio" id="instock" name="stockstatus" value="In stock" className="Inventory-Edit__block--status-input" onClick={AddQuantityInput}></input>
                                     <label for="instock" className="Inventory-Edit__block--status-label">In stock</label>
                                 </div>
 
                                 <div className="Inventory-Edit__block--status-block">
-                                    <input type="radio" id="outofstocks" name="stockstatus" value="Out of stock" className="Inventory-Edit__block--status-input"></input>
+                                    <input type="radio" id="outofstocks" name="stockstatus" value="Out of stock" className="Inventory-Edit__block--status-input" onClick={HideQuantityInput}></input>
                                     <label for="outofstock" className="Inventory-Edit__block--status-label">Out of stock</label>
                                 </div>
                             </div>
+                            <label className="Inventory-Edit__item-details--title OutofStock_DontShow" id="Inventory-Edit__title--inventoryquantity">Item Quantity</label>
+                            <input placeholder="500" className="Inventory-Edit__item-details--input OutofStock_DontShow" id="Inventory-Edit__input--inventoryquantity"/>
 
 
 
