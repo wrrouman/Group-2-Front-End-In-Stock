@@ -53,13 +53,16 @@ function Inventory_Item(props) {
                                 INVENTORY ITEM
                             </p>
                             <div className="Inventory-Item__allinfo--name">
-                                <p className="Inventory-Item__allinfo--info Inventory-Item__allinfo--itemName">
-                                    {props.Inventory_ItemInfo.itemName}
-                                </p>
-                                <img
-                                    src={Chevron_Right}
-                                    className="Inventory-Item__allinfo--chevronrighticon"
-                                />
+                                <NavLink to={`/inventories/${props.Inventory_ItemInfo.warehouseID}/${props.Inventory_ItemInfo.id}`} className="Inventory-Item__allinfo--namelink">
+                                    <p className="Inventory-Item__allinfo--info Inventory-Item__allinfo--itemName">
+                                        {props.Inventory_ItemInfo.itemName}
+                                    </p>
+                                    <img
+                                        src={Chevron_Right}
+                                        className="Inventory-Item__allinfo--chevronrighticon"
+                                    />
+                                </NavLink>
+
                             </div>
                         </div>
 

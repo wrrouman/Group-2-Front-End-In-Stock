@@ -34,7 +34,7 @@ function Inventory_List(props) {
             
         GetInventoriesFromAWarehouseInfo();
 
-    }, [props.warehouseID, InventoryListUpdate])
+    }, [props.warehouseID, InventoryListUpdate]);
 
     return(
         <>

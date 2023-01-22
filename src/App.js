@@ -49,7 +49,7 @@ function App() {
         if (RequiredVideoLoading === true) {
             GetAllWarehousesInfo();
         }
-    }, [AllWarehousesInfo]);
+    }, [AllWarehousesInfo, RequiredVideoLoading]);
 
     // useEffect - GetAllInventoriesInfo
     useEffect(() => {
@@ -80,7 +80,7 @@ function App() {
                     {/* return here to correct paths */}
                     {/* <Route path="placeholder1" element={<Header />} />
                     <Route path="Add" element={<Add_Warehouse />} /> */}
-
+                    
                     <Route
                         path="/"
                         element={
@@ -106,6 +106,10 @@ function App() {
                     <Route
                         path="/edit_warehouse/:warehouseID"
                         element={<Warehouse_Edit />}
+                    />
+                    <Route 
+                        path="/inventories/:warehouseID/:inventoryID" 
+                        element={<Inventory_Item_Details/>}
                     />
                     <Route
                         path="/edit_inventoryitems/:warehouseID/:inventoryID"
