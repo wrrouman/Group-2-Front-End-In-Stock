@@ -44,6 +44,19 @@
         }
     }
 
+    &__details-container--header {
+        display: flex;
+        @include mobile {
+            flex-direction: row;
+            gap: 1rem;
+        }
+        @include tablet {
+
+        }
+        @include desktop {
+        }
+    }
+
     &__details-container--left {
         display: flex;
         @include mobile {

@@ -30,7 +30,7 @@ function Warehouse_Details (props) {
                     </NavLink>
                     <p className="Warehouse-Details__header--warehouse-name">{CurrentWarehouse.name}</p>
                     <div className="Warehouse-Details__header--edit">
-                        <NavLink to={`/edit_warehouse/${warehouseID}`} className="Warehouse-Details__header--editicon-link" onClick={props.UpdateCurrentWarehouseId(warehouseID)}>
+                        <NavLink to={`/edit_warehouse/${warehouseID}`} className="Warehouse-Details__header--editicon-link">
                             <div className="editicon Warehouse-Details__header--editicon"></div>
                             <p className="Warehouse-Details__header--editicon-description">Edit</p>
                             

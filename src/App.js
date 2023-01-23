@@ -31,7 +31,7 @@ import Inventory_Item_Details from "./components/Inventory_Item_Details/Inventor
 import Inventory_List_Add_New_Inventory from "./components/Inventory_List_Add_New_Inventory/Inventory_List_Add_New_Inventory";
 
 function App() {
-    const [RequiredVideoLoading, setRequiredVideoLoading] = useState(true);
+    const [RequiredReLoading, setRequiredReLoading] = useState(true);
 
     // useState - All Warehouses Info
     const [AllWarehousesInfo, setAllWarehousesInfo] = useState([]);
@@ -50,13 +50,13 @@ function App() {
                 .then((element) => {
                     let warehouses_info = element.data;
                     setAllWarehousesInfo(warehouses_info);
-                    setRequiredVideoLoading(false);
+                    setRequiredReLoading(false);
                 });
         }
-        if (RequiredVideoLoading === true) {
+        if (RequiredReLoading === true) {
             GetAllWarehousesInfo();
         }
-    }, [AllWarehousesInfo, RequiredVideoLoading]);
+    }, [AllWarehousesInfo, RequiredReLoading]);
 
     // useEffect - GetAllInventoriesInfo
     useEffect(() => {
@@ -66,18 +66,13 @@ function App() {
                 .then((element) => {
                     let inventories_info = element.data;
                     setAllInventoriesInfo(inventories_info);
-                    setRequiredVideoLoading(false);
+                    setRequiredReLoading(false);
                 });
         }
-        if (RequiredVideoLoading === true) {
+        if (RequiredReLoading === true) {
             GetAllInventoriesInfo();
         }
     }, [AllInventoriesInfo]);
-
-    function UpdateCurrentWarehouseId(UpdateWarehouseId) {
-        setCurrentWarehouseId(UpdateWarehouseId);
-        console.log(CurrentWarehouseId);
-    }
 
     return (
         <>
@@ -105,16 +100,13 @@ function App() {
 
                    <Route path="add_inventoryitem" element={<Inventory_Add />}/>
 
-                    {/* Howard's Component */}
+
                     <Route
                         path="/warehouse_details/:warehouseID"
                         element={
                             <Warehouse_Details
                                 AllInventoriesInfo={AllInventoriesInfo}
                                 AllWarehousesInfo={AllWarehousesInfo}
-                                UpdateCurrentWarehouseId={
-                                    UpdateCurrentWarehouseId
-                                }
                             />
                         }
                     />
@@ -122,28 +114,29 @@ function App() {
                         path="/edit_warehouse/:warehouseID"
                         element={<Warehouse_Edit />}
                     />
-                    <Route 
-                        path="/inventories/:warehouseID/:inventoryID" 
-                        element={<Inventory_Item_Details/>}
-                    />
-                    
+
+                    {/* Edit Inventory Item */}
                     <Route
                         path="/edit_inventoryitems/:warehouseID/:inventoryID"
                         element={<Inventory_Edit />}
                     />
-                    {/* End of Howard's Component */}
+
+                    {/* Inventory Details  */}
+                    <Route 
+                        path="/inventories/:warehouseID/:inventoryID" 
+                        element={
+                            <Inventory_Item_Details
+                                AllWarehousesInfo={AllWarehousesInfo}
+                                AllInventoriesInfo={AllInventoriesInfo}
+                            />
+                        }
+                    />
 
                     <Route 
                         path="Inventory_List_Add_New_Inventory"
                         element={<Inventory_List_Add_New_Inventory />}
                     />
 
-                    <Route
-                        path="Inventory_Item_Details/:/inventory/:inventoryid"
-                        element={<Inventory_Item_Details 
-                                getURL={`http://localhost:8080/warehouses`}
-                        />}
-                    />
                 </Routes>
                 <Footer />
             </BrowserRouter>
