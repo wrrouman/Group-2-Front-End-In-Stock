@@ -70,38 +70,38 @@ function Warehouse_Edit() {
                     <p className="Warehouse-Edit__header--title">Edit Warehouse</p>
                 </div>
 
-                <form className="Warehouse-Edit__form" id="Warehouse-Edit__form">
+                <form className="Warehouse-Edit__form" id="Warehouse-Edit__form" onSubmit={ClickedonSave}>
                     <div className="Warehouse-Edit__block">
                         <div className="Warehouse-Edit__formblock--warehouse-details">
                             <p className="Warehouse-Edit__formblock--title">Warehouse Details</p>
 
                             <label className="Warehouse-Edit__warehouse-details--title">Warehouse Name</label>
-                            <input placeholder="Washington" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousename"/>
+                            <input placeholder="Washington" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousename" required/>
 
                             <label className="Warehouse-Edit__warehouse-details--title">Street Address</label>
-                            <input placeholder="33 Pearl Street SW" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehouseaddress"/>
+                            <input placeholder="33 Pearl Street SW" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehouseaddress" required/>
 
                             <label className="Warehouse-Edit__warehouse-details--title">City</label>
-                            <input placeholder="Washington" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousecity"/>
+                            <input placeholder="Washington" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousecity" required/>
 
                             <label className="Warehouse-Edit__warehouse-details--title">Country</label>
-                            <input placeholder="USA" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousecountry"/>
+                            <input placeholder="USA" className="Warehouse-Edit__warehouse-details--input" id="Warehouse-Edit__input--warehousecountry" required/>
                         </div>
 
                         <div className="Warehouse-Edit__formblock--contact-details">
                             <p className="Warehouse-Edit__formblock--title">Contact Details</p>
 
                             <label className="Warehouse-Edit__contact-details--title">Contact Name</label>
-                            <input placeholder="Graeme Lyon" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactname"/>
+                            <input placeholder="Graeme Lyon" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactname" required/>
 
                             <label className="Warehouse-Edit__contact-details--title">Position</label>
-                            <input placeholder="Warehouse Manager" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactposition"/>
+                            <input placeholder="Warehouse Manager" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactposition" required/>
 
                             <label className="Warehouse-Edit__contact-details--title">Phone Number</label>
-                            <input placeholder="+1 (647) 504-0911" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactphone"/>
+                            <input placeholder="+1 (647) 504-0911" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactphone" required/>
 
                             <label className="Warehouse-Edit__contact-details--title">Email</label>
-                            <input placeholder="glyon@instock.com" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactemail"/>
+                            <input placeholder="glyon@instock.com" className="Warehouse-Edit__contact-details--input" id="Warehouse-Edit__input--contactemail" required/>
                         </div>
 
                     </div>

@@ -57,7 +57,9 @@ function Warehouse_Item(props) {
                 </div>
                 <div>
                     <div className="warehouse-list__buttons-container">
+                        <NavLink to={`/delete_warehouse/${props.warehouseID}`}>
                         <img src={TrashIcon} alt="TrashIcon" className="warehouse-list__buttons--trash"></img>
+                        </NavLink>
                         <NavLink to={`/edit_warehouse/${props.SingleWarehouseInfo.id}`}>
                             <img src={PencilIcon} alt="PencilIcon" className="warehouse-list__buttons--pencil"></img>
                         </NavLink>

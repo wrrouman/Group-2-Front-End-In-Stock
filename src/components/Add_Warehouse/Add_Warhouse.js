@@ -92,7 +92,7 @@ function Add_Warehouse() {
       <div className="warehouse_add_popup">
         <div className="warehouse_add_header">
           <img src={Arrow_Back} />
-          <p>Add New Warehouse</p>
+          <p className="add_New_warehouse">Add New Warehouse</p>
         </div>
 
         <form className="warehouse_add_form">
