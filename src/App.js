@@ -40,7 +40,7 @@ function App() {
     const [AllInventoriesInfo, setAllInventoriesInfo] = useState([]);
 
     // useState - currentWarehouse
-    const [CurrentWarehouseId, setCurrentWarehouseId] = useState("000");
+    const [CurrentWarehouseId, setCurrentWarehouseId] = useState("9b4f79ea-0e6c-4e59-8e05-afd933d0b3d3");
 
     // useEffect - GetAllWarehousesInfo
     useEffect(() => {
@@ -134,7 +134,13 @@ function App() {
 
                     <Route 
                         path="Inventory_List_Add_New_Inventory"
-                        element={<Inventory_List_Add_New_Inventory />}
+                        element={
+                            <Inventory_List_Add_New_Inventory 
+                                AllWarehousesInfo={AllWarehousesInfo}
+                                AllInventoriesInfo={AllInventoriesInfo}
+                                CurrentWarehouseId={CurrentWarehouseId}
+                            />
+                        }
                     />
 
                 </Routes>

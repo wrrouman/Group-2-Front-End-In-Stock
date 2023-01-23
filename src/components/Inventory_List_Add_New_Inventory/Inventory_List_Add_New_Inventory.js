@@ -9,57 +9,32 @@ import PencilIcon from "../../assets/Icons/edit-24px.svg";
 import LessThanIcon from "../../assets/Icons/chevron_right-24px.svg";
 import SortIcon from "../../assets/Icons/sort-24px.svg";
 
-function InventoryListAddNewInventory({ getURL }) {
-    let { inventoryID } = useParams();
-    const [inventoryListState, setInventoryListState] = useState([]);
+import Inventory_List_Add_Item from "../../components/Inventory_List_Add_Item/Inventory_List_Add_Item.js";
 
+function InventoryListAddNewInventory(props) {
+    // let { inventoryID } = useParams();
+    // const [inventoryListState, setInventoryListState] = useState([]);
+
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const request = await axios.get(getURL);
+    //         setInventoryListState(request.data);
+    //         console.log(request.data);
+    //     }
+    //     fetchData();
+    // }, [getURL]);
+
+    const [defaultInventory, setdefaultInventory] = useState([]);
     useEffect(() => {
-        async function fetchData() {
-            const request = await axios.get(getURL);
-            setInventoryListState(request.data);
-            console.log(request.data);
-        }
-        fetchData();
-    }, [getURL]);
+        let DefaultInventoryDetail = props.AllInventoriesInfo.find(inv => inv.warehouseID === props.CurrentWarehouseId );
+        setdefaultInventory(DefaultInventoryDetail);
+    }, [])
 
     return (
         <>
-            <section className="inventory-list">
-                <div className="inventory-list__details-container">
-                    <aside className="inventory-list__details-container--left">
-                        <div>
-                            <h2>INVENTORY ITEM</h2>
-                            <div className="inventory-list__item-name-container">
-                                <Link path="Inventory_Item_Details/:/inventory/:inventoryid">
-                                    <h3>Placeholder Item</h3>
-                                </Link>
-                                <img src={LessThanIcon}></img>
-                            </div>
-                        </div>
-                        <div>
-                            <h2>CATEGORY</h2>
-                            <p>Placeholder Category</p>
-                        </div>
-                    </aside>
-                    <aside className="inventory-list__details-container--right">
-                        <div>
-                            <h2>STATUS</h2>
-                            <button>IN STOCK</button>
-                        </div>
-                        <div>
-                            <h2>QTY</h2>
-                            <p>Placeholder Number</p>
-                        </div>
-                        <div>
-                            <h2>WAREHOUSE</h2>
-                            <p>Placeholder Warehouse</p>
-                        </div>
-                    </aside>
-                </div>
-                <div className="inventory-list__buttons-container">
-                    <img src={TrashIcon} alt="TrashIcon"></img>
-                    <img src={PencilIcon} alt="PencilIcon"></img>
-                </div>
+            <section className="">{props.AllInventoriesInfo.map(inventory => (
+                <Inventory_List_Add_Item SingleInventoryInfo={inventory}/>
+            ))}
             </section>
         </>
     );

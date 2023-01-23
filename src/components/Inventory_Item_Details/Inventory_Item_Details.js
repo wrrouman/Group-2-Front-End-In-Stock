@@ -31,7 +31,7 @@ function Inventory_Item_Details(props) {
         // setCurrentWarehouse(CurrentWarehouseDetails);
         let CurrentInventoryDetails = props.AllInventoriesInfo.find(inventory => inventory.id === inventoryID);
         setCurrentInventory(CurrentInventoryDetails);
-    })
+    }, [inventoryID])
 
     console.log(CurrentInventory);
 
