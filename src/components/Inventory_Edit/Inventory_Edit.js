@@ -34,7 +34,7 @@ function Inventory_Edit(props) {
     }, [ClickInventorySave])
 
     const InventoryClickedonSave = (event) => {
-        // event.preventDefauls();
+        event.preventDefault();
         let form = document.getElementById("Inventory-Edit__form");
 
         let edit_inventoryname = document.getElementById("Inventory-Edit__input--inventoryname").value;
