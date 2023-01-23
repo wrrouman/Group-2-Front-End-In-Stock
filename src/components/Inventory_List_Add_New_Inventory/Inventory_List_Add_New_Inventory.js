@@ -1,8 +1,7 @@
 import "./Inventory_List_Add_New_Inventory.scss";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-
 
 //import images
 import TrashIcon from "../../assets/Icons/delete_outline-24px.svg";
@@ -11,14 +10,14 @@ import LessThanIcon from "../../assets/Icons/chevron_right-24px.svg";
 import SortIcon from "../../assets/Icons/sort-24px.svg";
 
 function InventoryListAddNewInventory({ getURL }) {
-    const [inventoryListState, setInventoryListState] = useState(
-        []
-    );
+    let { inventoryID } = useParams();
+    const [inventoryListState, setInventoryListState] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(getURL);
-            // setState(request.data);
+            setInventoryListState(request.data);
+            console.log(request.data);
         }
         fetchData();
     }, [getURL]);
@@ -31,7 +30,9 @@ function InventoryListAddNewInventory({ getURL }) {
                         <div>
                             <h2>INVENTORY ITEM</h2>
                             <div className="inventory-list__item-name-container">
-                                <h3>Placeholder Item</h3>
+                                <Link path="Inventory_Item_Details/:/inventory/:inventoryid">
+                                    <h3>Placeholder Item</h3>
+                                </Link>
                                 <img src={LessThanIcon}></img>
                             </div>
                         </div>

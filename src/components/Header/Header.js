@@ -35,7 +35,7 @@ function Header({ getURL }) {
                                 Warehouse
                             </button>
                         </NavLink>
-                        <Link to={"Inventory"}>
+                        <Link to={"Inventory_List_Add_New_Inventory"}>
                             <button className="header__nav-buttons--inventory">
                                 Inventory
                             </button>

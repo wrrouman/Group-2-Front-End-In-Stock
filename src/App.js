@@ -140,7 +140,9 @@ function App() {
 
                     <Route
                         path="Inventory_Item_Details/:/inventory/:inventoryid"
-                        element={<Inventory_Item_Details />}
+                        element={<Inventory_Item_Details 
+                                getURL={`http://localhost:8080/warehouses`}
+                        />}
                     />
                 </Routes>
                 <Footer />

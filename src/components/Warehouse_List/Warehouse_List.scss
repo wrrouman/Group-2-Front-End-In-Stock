@@ -39,7 +39,7 @@
         @include tablet {
             width: 100%;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         @include desktop {
         }
@@ -99,7 +99,7 @@
         @include tablet {
             width: 100%;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         @include desktop {
         }
